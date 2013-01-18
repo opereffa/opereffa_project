@@ -1,0 +1,8 @@
+the following libraries should be here:
+
+axis.jar
+commons-discovery-0.2.jar
+commons-logging.jar
+jaxrpc.jar
+saaj.jar
+wsdl4j.jar

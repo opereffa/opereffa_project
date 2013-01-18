@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core" xml:lang="en" lang="en">
+	<ui:composition template="OpereffaContentTemplate.xhtml">
+		<ui:define name="content">
+		<div align="center">
+		<table class="middleTable">
+		<tr>
+			<td align="center"><h1>Web Technologies used in Opereffa</h1></td>
+		</tr>
+		<tr>
+			<td align="left">
+				<p class="opereffa">Opereffa is a web based application built on a Java framework. We have chosen Java Server Faces as the web layer technology. It is a mature technology with a large user base, has open source implementations and can be used on completely open source application servers and web containers. It has vendor support and extensive tool support in the form of free, open source tools and commercial products. We wanted to target a community with a large set of existing stakeholders.</p>																 				
+				
+				<p class="opereffa">However, as Tony Shannon kept providing clinical requirements and as we started to list our future plans for the user interface it became clear that a purely server side technology like JSF would not be adequate for providing the UI functionality required to make systems easy to use. For this reason, browser technologies were evaluated and Javascript based AJAX frameworks were found to be better candidates for implementing UI layer enhancements, in comparison to other browser hosted technologies. The reasons for choosing Javascript based UI enhancements are mainly the ease of deployment of these technologies and their huge user base, ranging from desktop computers to mobile devices.
+				</p>
+				
+				<p class="opereffa">Even so, choosing a Javascript/AJAX framework was not an easy task, since there were multiple requirements that we needed to satisfy. Integration with existing systems was one of them. Most of the recent Javascript based frameworks are in one way or another integrated with server side technologies like JSF, for improved productivity. Sometimes such integration schemes are the source of new problems, especially if you want to use your web layer in other applications which are already using other combinations of web technologies. Also, server side integration is not as flexible as pure, client side (browser) Javascript frameworks, and GUI requirements in clinical applications needs that extra flexibility.  
+				</p>
+				
+				<p class="opereffa">The <a href="http://www.dojotoolkit.org/">DOJO toolkit </a>ended up as our preferred choice of Javascript technology. It has an extensive widget library, and is capable of parsing normal HTML and turning into its own widgets. Using this feature, we have integrated DOJO with JSF outputs, providing richer UI and AJAX capability for Opereffa. DOJO also plays nicely with most other web based applications. When other applications that we explored were using a Java based server side web technology, this made integration with them easier.  
+				</p>
+				
+				<p class="opereffa">JSF on its own as a productive technology, but using it for Opereffa required some extensions to be made. JSF already supported a powerful binding syntax for connecting UI artifacts to back end business objects, and, using a custom expression language resolver, we created a binding between JSF UI elements and the Opereffa framework code. With some additional tooling support, generation of JSF UI elements and forms from archetypes (.adl files) became automatic. DOJO integration is also automatic so that once an archetype has been created in the form of an ADL file, the set of tools creates the necessary bindings for Opereffa to process the model (the archetype) with maximum automation.
+				</p>
+				
+				<p class="opereffa">Extreme automation, however, results in loss of flexibility and we did not want this, either. Especially in clinical applications, UI customization is requested a lot. To provide this customization ability to the technical community, we have chosen generation of JSF artifacts. They can be modified easily using many existing tools, and the DOJO integration and Opereffa framework bindings adapt to these modifications. In this way, developers or designers can change or enhance JSF components, without losing the ability to use other features of the framework, such as persistence, validation etc.  
+				</p>
+			</td>
+		</tr>		
+		<tr>
+			<td align="center"><h1>Reporting in Opereffa</h1></td>
+		</tr>
+		<tr>
+			<td align="left">
+				<p class="opereffa">Managing aggregate information is a common requirement in many domains, and the clinical applications domain is no exception. As CRB requirements for displaying charts, exporting to formats like PDF or text appeared, we decided to employ open source reporting tools to provide the requested functionality.</p>																 				
+				<p class="opereffa">SSince our persistence model is managed by wrappers within the framework, these wrappers were used for connecting the saved data from the Opereffa web layer to the open source reporting engine of our choice: <a href="http://www.eclipse.org/birt/phoenix/">Eclipse Birt</a> </p>.
+				<p class="opereffa">Thanks to Birt's ability to consume Java classes, using scripting, data persisted in the Postgresql database became available to Eclipse Birt, allowing us to design reports with archetype based data. Using Birt's report designers it is possible to deal with UI issues like font colors, format of tables etc. Birt also allows us to export data easily to other formats like Microsoft Word, Excel, or Adobe PDF.</p>.
+							
+			</td>
+		</tr>		
+		<tr>
+			<td align="center"><h1>Persistence in Opereffa</h1></td>
+		</tr>
+		<tr>
+			<td align="left">
+				<p class="opereffa">Persistence is an inevitable work item in many information system, and it has been an active topic of discussion in the openEHR community. The persistence model of Opereffa is quite experimental. Due to the dynamic and hierarchical structure of archetypes, attribute/value model based persistence approaches become strong candidates since they are capable of persisting dynamic structures, with ease.</p>																 				
+				<p class="opereffa">Implementing a persistence model for archetype based data raises the question of "What level of granularity?". The more granular the level at which data is saved, in terms of archetype nodes and values, the more flexibility is achieved for using the data. However, increasing granularity can hurt performance, and generic models of persistence are not very easy to debug when things go wrong. Another problem we faced was that we did not have a large amount of clinical data to test performance of the persistence models we had in mind.</p>.
+				<p class="opereffa">We used a model with full granularity, where all archetype nodes are saved as attribute/value pairs. Using a single generic table with a limited number of columns, it is possible to save any data related to the archetype itself or to its nodes, without losing type information on the data. This approach however requires that all objects that persist data know also how to get that data back, since without the right method of joining the database rows, the data is "scattered around", or too atomic.</p>.
+				<p class="opereffa">The considerable advantage of using a single table is that a simple Hibernate class is the common method of persistence communication for all objects that need to save or load its data. This led to some interesting opportunities, especially for increasing system performance when using Hibernate.</p>.
+				<p class="opereffa">Another aspect we are keen to push to the limit is the use of the database server's (Postgresql) built in functions. There are many possibilities in code generation for creating high performance database level functions/stored procedures, and, given the performance advantages of database level optimizations, we decided to invest more into the database layer.</p>.
+				<p class="opereffa">Since the archetypes define the structure and limits of data, it is possible to generate random data that conforms to the constraints of archetypes, and we used this idea to generate millions of rows of test data to benchmark database models. The Opereffa persistence layer was tested with over 10 million rows of data, and performance was quite good. We believe that this method can be used for many purposes, even, as here, for the simulation of clinical data.</p>.
+				<p class="opereffa">It should be noted that the persistence model is quite experimental at this stage, even if it already appears to perform quite well in many scenarios. It is our hope that with joint discussions in the community, we will achieve a publicly available and high performance persistence model for archetypes, quite soon</p>.
+							
+			</td>
+		</tr>
+		</table>
+		</div>
+		</ui:define>		
+	</ui:composition>					
+</html>

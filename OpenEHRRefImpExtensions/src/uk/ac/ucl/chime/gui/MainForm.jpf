@@ -1,0 +1,4 @@
+#Target class
+target=uk.MainForm
+jpf.report.console.show_code=true
+jpf.report.console.show_steps=true

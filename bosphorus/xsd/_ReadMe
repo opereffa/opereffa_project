@@ -1,0 +1,13 @@
+the following xsd files from openehr  should be here:
+
+AOM.xsd
+Archetype.xsd
+ArchetypeTest.xsd
+BaseTypes.xsd
+BosphorusMessaging.xsd
+Composition.xsd
+Content.xsd
+OpenehrProfile.xsd
+Resource.xsd
+Structure.xsd
+Version.xsd

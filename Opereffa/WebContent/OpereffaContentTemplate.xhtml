@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core" xml:lang="en" lang="en"
+	>
+	<head>
+		<link href="#{facesContext.externalContext.request.contextPath}/styles/openEHR.css"
+	type="text/css" rel="stylesheet" />
+	<style type="text/css">
+		@import "#{facesContext.externalContext.request.contextPath}/scripts/dojo/dojo/resources/dojo.css";		
+		@import "#{facesContext.externalContext.request.contextPath}/scripts/dojo/dijit/themes/tundra/tundra.css";		
+		@import "dndDefault.css";
+	</style>
+	<style type="text/css">  
+  					
+  			
+    </style>
+
+	
+		
+			
+			<script type="text/javascript"> 
+	//<![CDATA[ 		  
+		
+function headerLinkMouseOut(element){
+	element.className='headerLink';
+}
+
+function headerLinkMouseOver(element){
+	element.className='headerLink-hover';
+}
+	 //]]> 
+	</script>	
+		</head>
+		<ui:define name="content">
+		<body class="tundra" id="maincontainerBody"  >
+		
+		<div id="contextId" style="display:none;" >Test patient Id</div>
+		<table style="width: 100%;background-color: #4F81BD;">
+			<tr>
+				<td >
+				
+					<table style="width:800px;" >
+			<tr>
+			<td align="left" ><a id="changePatientLink" href="introduction.jsf" class="headerLink" onmouseover="headerLinkMouseOver(this);" onmouseout="headerLinkMouseOut(this);" >Introduction</a></td>
+			<td align="left" ><a id="changePatientLink" href="clinicalreq.jsf" class="headerLink" onmouseover="headerLinkMouseOver(this);" onmouseout="headerLinkMouseOut(this);" >Clinical Requirements</a></td>
+			<td align="left" ><a id="changePatientLink" href="architecture.jsf" class="headerLink" onmouseover="headerLinkMouseOver(this);" onmouseout="headerLinkMouseOut(this);" >Architecture</a></td>
+			<td align="left" ><a id="changePatientLink" href="technologies.jsf" class="headerLink" onmouseover="headerLinkMouseOver(this);" onmouseout="headerLinkMouseOut(this);" >Technologies</a></td>
+			<td align="left" ><a id="changePatientLink" href="roadmap.jsf" class="headerLink" onmouseover="headerLinkMouseOver(this);" onmouseout="headerLinkMouseOut(this);">Roadmap</a></td>
+			<td align="left" ><a id="changePatientLink" href="installation.jsf" class="headerLink" onmouseover="headerLinkMouseOver(this);" onmouseout="headerLinkMouseOut(this);" >Installation</a></td>
+			
+			<td align="left" ><a id="changePatientLink" href="installation.jsf" class="headerLink" onmouseover="headerLinkMouseOver(this);" onmouseout="headerLinkMouseOut(this);" onclick="window.open('MainContainer2.jsf');return false;">Demo</a></td>
+			<td align="left" ><a id="changePatientLink" href="about.jsf" class="headerLink" onmouseover="headerLinkMouseOver(this);" onmouseout="headerLinkMouseOut(this);" >About</a></td>			
+			<td align="left" ><a id="changePatientLink" href="more.jsf" class="headerLink" onmouseover="headerLinkMouseOver(this);" onmouseout="headerLinkMouseOut(this);" >More...</a></td>
+			</tr>
+			
+			
+		</table>
+				
+				</td>
+				
+				<td align="right">
+				
+				<table >
+			<tr>
+			<td align="right" valign="bottom" width="50px;">
+				<a href="http://www.openehr.org" ><img src="images/openEHR.jpeg" alt="" border="0" /></a>
+			</td>
+			<td align="right" valign="bottom" width="50px;">
+				<a href="http://www.chime.ucl.ac.uk/"><img src="images/ucllogo.png" alt="" border="0" /></a>
+			</td>
+			</tr>
+			
+			
+		</table>
+				</td>
+			</tr>
+		</table>
+				
+			
+		
+		<!-- HERE GOES PAGE CONTENT -->
+		<ui:insert name="content"></ui:insert>
+		
+		 		  
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-9276506-1");
+pageTracker._trackPageview();
+} catch(err) {}</script></body>
+		</ui:define>
+	
+</html>

@@ -1,0 +1,25 @@
+#MyEclipse Hibernate Properties
+#Sun May 10 14:02:33 BST 2009
+sessionFactoryName=uk.ac.ucl.chime.db.HibernateSessionFactory
+genBasicCompId=true
+profile=
+daoSFId=
+version=3.2
+jndiPath=
+detectM2M=false
+reStrategyClass=
+detectO2O=false
+springDaoFile=
+useJavaTypes=true
+keyGenerator=sequence
+libInstallFolder=lib
+addLibs2Project=true
+genVersionTag=false
+sessionFactoryId=
+basePersistenceClass=
+genAnnotations=true
+reSettingsFile=/DBTest/hibernate.reveng.xml
+configFile=/DBTest/src/hibernate.cfg.xml
+createConfigFile=true
+addLibs2Classpath=true
+baseDaoClass=uk.ac.ucl.chime.db.BaseHibernateDAO

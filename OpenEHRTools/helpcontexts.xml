@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.contexts"?>
+<contexts>
+	<context id="openehr_plugin_help" >
+		<description>Opereffa help topics.</description>
+		<topic label="openEHR Wiki" href="http://www.openehr.org/wiki"/>
+		<topic label="openEHR mail lists" href="http://www.nabble.com/openEHR-f18276.html"/>
+		<topic label="openEHR CKM" href="http://www.openehr.org/knowledge"/>
+	</context>
+</contexts>

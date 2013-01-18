@@ -1,0 +1,17 @@
+the following libraries should be here:
+
+activation-1.1.jar
+FastInfoset-1.2.2.jar
+javassist-3.6.0.GA.jar
+jaxb-api-2.1.jar
+jaxb-impl-2.1.8.jar
+jaxrs-api-1.0.0.GA.jar
+jettison-1.0.1.jar
+jsr250-api-1.0.jar
+resteasy-jaxb-provider-1.0.0.GA.jar
+resteasy-jaxrs-1.0.0.GA.jar
+scannotation-1.0.2.jar
+sjsxp-1.0.1.jar
+slf4j-api-1.5.2.jar
+slf4j-simple-1.5.2.jar
+stax-api-1.0.jar

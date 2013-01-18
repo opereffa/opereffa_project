@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core" xml:lang="en" lang="en">
+	<head>
+		<title>My Facelets Page</title>
+		<meta http-equiv="keywords" content="enter,your,keywords,here" />
+		<meta http-equiv="description"
+			content="A short description of this page." />
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+		<!--<link rel="stylesheet" type="text/css" href="styles.css">-->
+	</head>
+	<body>
+		<p>
+		<h:form>
+			<table>
+		<tr>
+			<td>
+			<div>ABC</div>
+			</td>
+			<td>
+				<h:inputText value="#{archetypeBinder.dvtext.text.inNode['/activities[at0001]/description[at0002]/items[at0003]/value']}"/>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+			<div>Oxygen (l/minute)</div><h:inputText value="#{test.testVal}"></h:inputText>
+			</td>
+			<td>
+				<h:inputText value="#{archetypeBinder.dvquantity.magnitude.inNode['/activities[at0001]/description[at0002]/items[at0013]/value']}" ></h:inputText>					<h:selectOneMenu value="#{archetypeBinder.dvquantity.selectedUnit.inNode['/activities[at0001]/description[at0002]/items[at0013]/value']}">  						<f:selectItems value="#{archetypeBinder.dvquantity.unitsList.inNode['/activities[at0001]/description[at0002]/items[at0013]/value']}" />					</h:selectOneMenu>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+			<div>Cardiac Monitoring</div>
+			</td>
+			<td>
+				<h:selectBooleanCheckbox value="#{archetypeBinder.boolean.value.inNode['/activities[at0001]/description[at0002]/items[at0012]/value/value']}"></h:selectBooleanCheckbox>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+			<div>IV Access</div>
+			</td>
+			<td>
+				<h:inputText value="#{archetypeBinder.dvtext.text.inNode['/activities[at0001]/description[at0002]/items[at0005]/value']}"/>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+			<div>IV Fluid</div>
+			</td>
+			<td>
+				<h:selectOneMenu value="#{archetypeBinder.dvtext.selectedText.inNode['/activities[at0001]/description[at0002]/items[at0008]/value']}">				<f:selectItems value="#{archetypeBinder.dvtext.allowedValues.inNode['/activities[at0001]/description[at0002]/items[at0008]/value']}" />
+				</h:selectOneMenu>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+			<div>IV Medication</div>
+			</td>
+			<td>
+				<h:selectOneMenu value="#{archetypeBinder.dvtext.selectedText.inNode['/activities[at0001]/description[at0002]/items[at0009]/value']}">				<f:selectItems value="#{archetypeBinder.dvtext.allowedValues.inNode['/activities[at0001]/description[at0002]/items[at0009]/value']}" />
+				</h:selectOneMenu>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+			<div>Po Medication</div>
+			</td>
+			<td>
+				<h:selectOneMenu value="#{archetypeBinder.dvtext.selectedText.inNode['/activities[at0001]/description[at0002]/items[at0010]/value']}">				<f:selectItems value="#{archetypeBinder.dvtext.allowedValues.inNode['/activities[at0001]/description[at0002]/items[at0010]/value']}" />
+				</h:selectOneMenu>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+			<div>Referal</div>
+			</td>
+			<td>
+				<h:inputText value="#{archetypeBinder.dvtext.text.inNode['/activities[at0001]/description[at0002]/items[at0011]/value']}"/>
+			</td>
+		</tr>
+		
+		<tr>
+			<td colspan="2" align="right">
+			<h:commandButton value="post me" action="#{archetypeBinder.performAction}"/>
+			</td>
+		</tr>
+</table>
+</h:form>
+		</p>
+	</body>
+</html>

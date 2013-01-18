@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry exported="true" kind="lib" path="libs/opereffaLibs/antlr-2.7.6.jar" sourcepath="OpenEHRToolssrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="libs/opereffaLibs/commons-collections-3.1.jar" sourcepath="OpenEHRToolssrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="libs/opereffaLibs/commons-lang-2.2.jar" sourcepath="OpenEHRToolssrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="libs/opereffaLibs/commons-logging-1.0.4.jar" sourcepath="OpenEHRToolssrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="libs/opereffaLibs/dom4j-1.6.1.jar" sourcepath="OpenEHRToolssrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="libs/opereffaLibs/ejb3-persistence.jar" sourcepath="OpenEHRToolssrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="libs/opereffaLibs/hibernate-annotations.jar" sourcepath="OpenEHRToolssrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="libs/opereffaLibs/hibernate-commons-annotations.jar" sourcepath="OpenEHRToolssrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="libs/opereffaLibs/hibernate-core.jar" sourcepath="Q:/eclipseWorkSpaces/OpereffaDev/OpenEHRRefImpExtensions/src"/>
+	<classpathentry exported="true" kind="lib" path="libs/opereffaLibs/hibernate-entitymanager.jar" sourcepath="OpenEHRToolssrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="libs/opereffaLibs/hibernate-testing.jar" sourcepath="OpenEHRToolssrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="libs/opereffaLibs/hibernate-validator-4.0.0.Beta1.jar" sourcepath="OpenEHRToolssrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="libs/opereffaLibs/hibernate3.jar" sourcepath="OpenEHRToolssrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="libs/opereffaLibs/javassist-3.4.GA.jar" sourcepath="OpenEHRToolssrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="libs/opereffaLibs/jdom.jar" sourcepath="OpenEHRToolssrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="libs/opereffaLibs/jta-1.1.jar" sourcepath="OpenEHRToolssrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="libs/opereffaLibs/log4j-1.2.14.jar" sourcepath="OpenEHRToolssrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="libs/opereffaLibs/postgresql-8.3-604.jdbc3.jar" sourcepath="OpenEHRToolssrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="libs/opereffaLibs/slf4j-api-1.5.6.jar" sourcepath="OpenEHRToolssrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="libs/opereffaLibs/slf4j-log4j12-1.5.6.jar" sourcepath="OpenEHRToolssrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="libs/opereffaLibs/stax-api-1.0-2.jar" sourcepath="OpenEHRToolssrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="libs/opereffaLibs/swing-layout-1.0.3.jar" sourcepath="OpenEHRToolssrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="libs/opereffaLibs/validation-api-1.0.CR2.jar" sourcepath="OpenEHRToolssrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="libs/opereffaLibs/liboutputs/DBPojos.jar" sourcepath="OpenEHRToolssrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="libs/opereffaLibs/openEHRRefImp/adl-parser-1.0.5-SNAPSHOT.jar" sourcepath="OpenEHRToolssrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="libs/opereffaLibs/openEHRRefImp/adl-serializer-0.1-SNAPSHOT.jar" sourcepath="OpenEHRToolssrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="libs/opereffaLibs/openEHRRefImp/measure-serv-0.1-SNAPSHOT.jar" sourcepath="OpenEHRToolssrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="libs/opereffaLibs/openEHRRefImp/mini-termserv-0.1-SNAPSHOT.jar" sourcepath="OpenEHRToolssrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="libs/opereffaLibs/openEHRRefImp/openehr-aom-0.1-SNAPSHOT.jar" sourcepath="OpenEHRToolssrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="libs/opereffaLibs/openEHRRefImp/openehr-ap-0.1-SNAPSHOT.jar" sourcepath="OpenEHRToolssrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="libs/opereffaLibs/openEHRRefImp/openehr-rm-core-0.1-SNAPSHOT.jar" sourcepath="OpenEHRToolssrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="libs/opereffaLibs/openEHRRefImp/openehr-rm-domain-0.1-SNAPSHOT.jar" sourcepath="OpenEHRToolssrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="libs/opereffaLibs/openEHRRefImp/rm-builder-0.1-SNAPSHOT.jar" sourcepath="OpenEHRToolssrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="libs/opereffaLibs/openEHRRefImp/xml-serializer-0.1-SNAPSHOT.jar" sourcepath="OpenEHRToolssrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="libs/opereffaLibs/liboutputs/OpenEHRRefImpExtensions.jar" sourcepath="Q:/eclipseWorkSpaces/OpereffaDev/OpenEHRRefImpExtensions/src"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

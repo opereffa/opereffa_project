@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core" xml:lang="en" lang="en">
+	<ui:composition template="archetypeFormTemplate.xhtml">
+		<ui:define name="archetypeFormContent">
+<input id="archetypeFileName" type="hidden" value="openEHR-EHR-EVALUATION.soap_assessment_rcptermbound.v4.adl"/>
+<table>
+		<tr>
+			<td>
+			<div jsf2dojo="true" style="display:inline;" ><div>Summary and Interpretation of Findings</div></div>
+			</td>
+			<td>
+				<div jsf2dojo="true" style="display:inline;" ><h:inputText value="#{archetypeBinder.dvtext.text.inNode['/data[at0001]/items[at0006]/value']}"/></div>
+			</td>
+			<td>
+			
+			</td>
+
+		</tr>
+
+		<tr>
+			<td>
+			<div jsf2dojo="true" style="display:inline;" ><div>Problem List</div></div>
+			</td>
+			<td>
+				<div jsf2dojo="true" style="display:inline;" ><h:selectOneMenu value="#{archetypeBinder.dvcodedtext.selectedCode.inNode['/data[at0001]/items[at0002]/value']}">
+				<f:selectItems value="#{archetypeBinder.dvcodedtext.codesList.inNode['/data[at0001]/items[at0002]/value']}" />
+				</h:selectOneMenu></div>
+			</td>
+			<td>
+			
+			</td>
+
+		</tr>
+
+		<tr>
+			<td>
+			<div jsf2dojo="true" style="display:inline;" ><div>Differential Diagnosis</div></div>
+			</td>
+			<td>
+				<div jsf2dojo="true" style="display:inline;" ><div id="termRubric#{archetypeBinder.randomGroupId.inNode['/data[at0001]/items[at0003]/value']}" jsf2dojo="true"  style="display:inline;"><h:inputText value="#{archetypeBinder.dvcodedtext.selectedTerminologyItemName.inNode['/data[at0001]/items[at0003]/value']}"/>
+					</div>
+					<div id="termCode#{archetypeBinder.randomGroupId.inNode['/data[at0001]/items[at0003]/value']}" jsf2dojo="true"  style="display:inline;"><h:inputHidden    value="#{archetypeBinder.dvcodedtext.selectedTerminologyItemCode.inNode['/data[at0001]/items[at0003]/value']}"/>
+					</div>								
+				</div>				
+				<div id="dropDownContainerMarker#{archetypeBinder.randomGroupId.inNode['/data[at0001]/items[at0003]/value']}" style="display:none;">#{archetypeBinder.randomGroupId.inNode['/data[at0001]/items[at0003]/value']}</div><div id="dropDownContainer#{archetypeBinder.randomGroupId.inNode['/data[at0001]/items[at0003]/value']}" style="display:inline;">
+					<div dojoType="dijit.form.DropDownButton" id="dropDown#{archetypeBinder.randomGroupId.inNode['/data[at0001]/items[at0003]/value']}" >				 
+						<span>...</span>
+						<div dojoType="dijit.TooltipDialog" id="dlgChooseTermItem#{archetypeBinder.randomGroupId.inNode['/data[at0001]/items[at0003]/value']}" onFocus="configureTooltipHandlers('#{archetypeBinder.randomGroupId.inNode['/data[at0001]/items[at0003]/value']}');" onBlur="performTooltipDialogShutdown('#{archetypeBinder.randomGroupId.inNode['/data[at0001]/items[at0003]/value']}');" style="width:550px;height:400px;" title="Choose a terminology item" >			
+							<table border="0" width="100%">
+								<tr> 
+									<td>
+										<input type="text" id="txtkeyword#{archetypeBinder.randomGroupId.inNode['/data[at0001]/items[at0003]/value']}" name="txtkeyword#{archetypeBinder.randomGroupId.inNode['/data[at0001]/items[at0003]/value']}" value=""  style="margin-bottom:10px;" dojoType="dijit.form.TextBox" trim="true" />						
+									</td>
+								</tr>
+								<tr> 
+									<td>
+										<div style="width:100%;height:300px;">
+											<div jsid="grid#{archetypeBinder.randomGroupId.inNode['/data[at0001]/items[at0003]/value']}" id="grid#{archetypeBinder.randomGroupId.inNode['/data[at0001]/items[at0003]/value']}" dojoType="dojox.Grid" structure="layout" class="terminologyGrid"></div>
+										</div>
+									</td>
+								</tr>
+								<tr> 
+									<td align="center">
+									<button dojoType="dijit.form.Button" id="selectTermCode#{archetypeBinder.randomGroupId.inNode['/data[at0001]/items[at0003]/value']}" onClick="performTooltipDialogShutdown('#{archetypeBinder.randomGroupId.inNode['/data[at0001]/items[at0003]/value']}');" name="selectTermCode#{archetypeBinder.randomGroupId.inNode['/data[at0001]/items[at0003]/value']}" type="submit">OK</button>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div dojoType="dijit.form.Button" onClick="clearCodeandRubric('#{archetypeBinder.randomGroupId.inNode['/data[at0001]/items[at0003]/value']}');">
+					   <img src="images/delete.gif" width="18" height="18"/>				   
+					</div>	</div>
+			</td>
+			<td>
+			
+			</td>
+
+		</tr>
+
+		<tr>
+			<td>
+			<div jsf2dojo="true" style="display:inline;" ><div>Relevant Risk Factors</div></div>
+			</td>
+			<td>
+				<div jsf2dojo="true" style="display:inline;" ><h:inputText value="#{archetypeBinder.dvtext.text.inNode['/data[at0001]/items[at0005]/value']}"/></div>
+			</td>
+			<td>
+			
+			</td>
+
+		</tr>
+
+		<tr>
+			<td>
+			<div jsf2dojo="true" style="display:inline;" ><div>Other Diagnosis</div></div>
+			</td>
+			<td>
+				<div jsf2dojo="true" style="display:inline;" ><div id="termRubric#{archetypeBinder.randomGroupId.inNode['/data[at0001]/items[at0013]/value']}" jsf2dojo="true"  style="display:inline;"><h:inputText value="#{archetypeBinder.dvcodedtext.selectedTerminologyItemName.inNode['/data[at0001]/items[at0013]/value']}"/>
+					</div>
+					<div id="termCode#{archetypeBinder.randomGroupId.inNode['/data[at0001]/items[at0013]/value']}" jsf2dojo="true"  style="display:inline;"><h:inputHidden    value="#{archetypeBinder.dvcodedtext.selectedTerminologyItemCode.inNode['/data[at0001]/items[at0013]/value']}"/>
+					</div>								
+				</div>				
+				<div id="dropDownContainerMarker#{archetypeBinder.randomGroupId.inNode['/data[at0001]/items[at0013]/value']}" style="display:none;">#{archetypeBinder.randomGroupId.inNode['/data[at0001]/items[at0013]/value']}</div><div id="dropDownContainer#{archetypeBinder.randomGroupId.inNode['/data[at0001]/items[at0013]/value']}" style="display:inline;">
+					<div dojoType="dijit.form.DropDownButton" id="dropDown#{archetypeBinder.randomGroupId.inNode['/data[at0001]/items[at0013]/value']}" >				 
+						<span>...</span>
+						<div dojoType="dijit.TooltipDialog" id="dlgChooseTermItem#{archetypeBinder.randomGroupId.inNode['/data[at0001]/items[at0013]/value']}" onFocus="configureTooltipHandlers('#{archetypeBinder.randomGroupId.inNode['/data[at0001]/items[at0013]/value']}');" onBlur="performTooltipDialogShutdown('#{archetypeBinder.randomGroupId.inNode['/data[at0001]/items[at0013]/value']}');" style="width:550px;height:400px;" title="Choose a terminology item" >			
+							<table border="0" width="100%">
+								<tr> 
+									<td>
+										<input type="text" id="txtkeyword#{archetypeBinder.randomGroupId.inNode['/data[at0001]/items[at0013]/value']}" name="txtkeyword#{archetypeBinder.randomGroupId.inNode['/data[at0001]/items[at0013]/value']}" value=""  style="margin-bottom:10px;" dojoType="dijit.form.TextBox" trim="true" />						
+									</td>
+								</tr>
+								<tr> 
+									<td>
+										<div style="width:100%;height:300px;">
+											<div jsid="grid#{archetypeBinder.randomGroupId.inNode['/data[at0001]/items[at0013]/value']}" id="grid#{archetypeBinder.randomGroupId.inNode['/data[at0001]/items[at0013]/value']}" dojoType="dojox.Grid" structure="layout" class="terminologyGrid"></div>
+										</div>
+									</td>
+								</tr>
+								<tr> 
+									<td align="center">
+									<button dojoType="dijit.form.Button" id="selectTermCode#{archetypeBinder.randomGroupId.inNode['/data[at0001]/items[at0013]/value']}" onClick="performTooltipDialogShutdown('#{archetypeBinder.randomGroupId.inNode['/data[at0001]/items[at0013]/value']}');" name="selectTermCode#{archetypeBinder.randomGroupId.inNode['/data[at0001]/items[at0013]/value']}" type="submit">OK</button>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div dojoType="dijit.form.Button" onClick="clearCodeandRubric('#{archetypeBinder.randomGroupId.inNode['/data[at0001]/items[at0013]/value']}');">
+					   <img src="images/delete.gif" width="18" height="18"/>				   
+					</div>	</div>
+			</td>
+			<td>
+			
+			</td>
+
+		</tr>
+
+		<tr>
+			<td>
+			<div jsf2dojo="true" style="display:inline;" ><div>Senior Review</div></div>
+			</td>
+			<td>
+				<div jsf2dojo="true" style="display:inline;" ><h:inputText value="#{archetypeBinder.dvtext.text.inNode['/data[at0001]/items[at0007]/value']}"/></div>
+			</td>
+			<td>
+			
+			</td>
+
+		</tr>
+
+		<tr>
+			<td>
+			<div jsf2dojo="true" style="display:inline;" ><div>Post Take Ward Round</div></div>
+			</td>
+			<td>
+				<div jsf2dojo="true" style="display:inline;" ><h:inputText value="#{archetypeBinder.dvtext.text.inNode['/data[at0001]/items[at0008]/value']}"/></div>
+			</td>
+			<td>
+			
+			</td>
+
+		</tr>
+
+		<tr>
+			<td>
+			<div jsf2dojo="true" style="display:inline;" ><div>other detail</div></div>
+			</td>
+			<td>
+				<div jsf2dojo="true" style="display:inline;" ><h:inputText value="#{archetypeBinder.dvtext.text.inNode['/data[at0001]/items[at0004]/value']}"/></div>
+			</td>
+			<td>
+			
+			</td>
+
+		</tr>
+<tr>
+				<td colspan="2" align="right">
+				<div jsf2dojo="true" style="display:inline;" ><h:commandButton id="postit"  type="submit" value="#{connectorBean.modeLabel}" action="#{archetypeBinder.performAction}"/></div>
+				</td>
+			</tr></table></ui:define>		
+	</ui:composition>
+</html>

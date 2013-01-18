@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="tests"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/3"/>
+	<classpathentry kind="lib" path="/Libraries/opereffaLibs/openEHRRefImp/adl-parser-1.0.5-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="/Libraries/opereffaLibs/openEHRRefImp/adl-serializer-0.1-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="/Libraries/opereffaLibs/commons-collections-3.1.jar"/>
+	<classpathentry kind="lib" path="/Libraries/opereffaLibs/commons-lang-2.2.jar"/>
+	<classpathentry kind="lib" path="/Libraries/opereffaLibs/commons-logging-1.0.4.jar"/>
+	<classpathentry kind="lib" path="/Libraries/opereffaLibs/liboutputs/DBPojos.jar"/>
+	<classpathentry kind="lib" path="/Libraries/opereffaLibs/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="/Libraries/opereffaLibs/ejb3-persistence.jar"/>
+	<classpathentry kind="lib" path="/Libraries/opereffaLibs/hibernate-annotations.jar"/>
+	<classpathentry kind="lib" path="/Libraries/opereffaLibs/hibernate-commons-annotations.jar"/>
+	<classpathentry kind="lib" path="/Libraries/opereffaLibs/hibernate-core.jar"/>
+	<classpathentry kind="lib" path="/Libraries/opereffaLibs/hibernate-entitymanager.jar"/>
+	<classpathentry kind="lib" path="/Libraries/opereffaLibs/hibernate-validator-4.0.0.Beta1.jar"/>
+	<classpathentry kind="lib" path="/Libraries/opereffaLibs/hibernate3.jar"/>
+	<classpathentry kind="lib" path="/Libraries/opereffaLibs/javassist-3.4.GA.jar"/>
+	<classpathentry kind="lib" path="/Libraries/opereffaLibs/jdom.jar"/>
+	<classpathentry kind="lib" path="/Libraries/opereffaLibs/jta-1.1.jar"/>
+	<classpathentry kind="lib" path="/Libraries/opereffaLibs/log4j-1.2.14.jar"/>
+	<classpathentry kind="lib" path="/Libraries/opereffaLibs/openEHRRefImp/measure-serv-0.1-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="/Libraries/opereffaLibs/openEHRRefImp/mini-termserv-0.1-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="/Libraries/opereffaLibs/openEHRRefImp/openehr-aom-0.1-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="/Libraries/opereffaLibs/openEHRRefImp/openehr-ap-0.1-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="/Libraries/opereffaLibs/openEHRRefImp/openehr-rm-core-0.1-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="/Libraries/opereffaLibs/openEHRRefImp/openehr-rm-domain-0.1-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="/Libraries/opereffaLibs/openEHRRefImp/rm-builder-0.1-SNAPSHOT.jar" sourcepath="Q:/eclipseWorkSpaces/openEHR/rm-builder/src"/>
+	<classpathentry kind="lib" path="/Libraries/opereffaLibs/openEHRRefImp/xml-serializer-0.1-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="/Libraries/opereffaLibs/postgresql-8.3-604.jdbc3.jar"/>
+	<classpathentry kind="lib" path="/Libraries/opereffaLibs/slf4j-api-1.5.6.jar"/>
+	<classpathentry kind="lib" path="/Libraries/opereffaLibs/slf4j-log4j12-1.5.6.jar"/>
+	<classpathentry kind="lib" path="/Libraries/opereffaLibs/swing-layout-1.0.3.jar"/>
+	<classpathentry kind="lib" path="/Libraries/opereffaLibs/validation-api-1.0.CR2.jar"/>
+	<classpathentry kind="lib" path="/Libraries/opereffaLibs/antlr-2.7.6.jar"/>
+	<classpathentry kind="lib" path="/Libraries/opereffaLibs/lbRuntime.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

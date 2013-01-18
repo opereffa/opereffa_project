@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core" xml:lang="en" lang="en">
+	<head>
+		<title>My Facelets Page</title>
+		<meta http-equiv="keywords" content="enter,your,keywords,here" />
+		<meta http-equiv="description"
+			content="A short description of this page." />
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+		<!--<link rel="stylesheet" type="text/css" href="styles.css">-->
+	</head>
+	<body>
+	<h:form>
+		<p><table>
+		<tr>
+			<td>
+			<div>Oximetry</div>
+			</td>
+			<td>
+				<h:inputText value="#{archetypeBinder.dvtext.text.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0004]/value']}"/>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+			<div>Blood Glucose</div>
+			</td>
+			<td>
+				<h:inputText value="#{archetypeBinder.dvtext.text.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0036]/value']}"/>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+			<div>Urinalysis</div>
+			</td>
+			<td>
+				<h:inputText value="#{archetypeBinder.dvtext.text.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0006]/value']}"/>
+			</td>
+		</tr>
+<tr><td colspan="2"><div>ECG Order and Result</div></td></tr>
+
+		<tr>
+			<td>
+			<div>ECG Order</div>
+			</td>
+			<td>
+				<h:selectBooleanCheckbox value="#{archetypeBinder.boolean.value.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0014]/items[at0020]/value/value']}"></h:selectBooleanCheckbox>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+			<div>ECG Result</div>
+			</td>
+			<td>
+				<h:inputText value="#{archetypeBinder.dvtext.text.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0014]/items[at0005]/value']}"/>
+			</td>
+		</tr>
+<tr><td colspan="2"><div>Haematology Order and Result</div></td></tr>
+
+		<tr>
+			<td>
+			<div>FBC Order</div>
+			</td>
+			<td>
+				<h:selectBooleanCheckbox value="#{archetypeBinder.boolean.value.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0015]/items[at0021]/value/value']}"></h:selectBooleanCheckbox>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+			<div>Clotting order</div>
+			</td>
+			<td>
+				<h:selectBooleanCheckbox value="#{archetypeBinder.boolean.value.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0015]/items[at0022]/value/value']}"></h:selectBooleanCheckbox>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+			<div>Group and Save order</div>
+			</td>
+			<td>
+				<h:selectBooleanCheckbox value="#{archetypeBinder.boolean.value.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0015]/items[at0023]/value/value']}"></h:selectBooleanCheckbox>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+			<div>Hb result</div>
+			</td>
+			<td>
+				<h:inputText value="#{archetypeBinder.dvquantity.magnitude.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0015]/items[at0024]/value']}" ></h:inputText>					<h:selectOneMenu value="#{archetypeBinder.dvquantity.selectedUnit.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0015]/items[at0024]/value']}">  						<f:selectItems value="#{archetypeBinder.dvquantity.unitsList.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0015]/items[at0024]/value']}" />					</h:selectOneMenu>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+			<div>WCC result</div>
+			</td>
+			<td>
+				<h:inputText value="#{archetypeBinder.dvquantity.magnitude.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0015]/items[at0025]/value']}" ></h:inputText>					<h:selectOneMenu value="#{archetypeBinder.dvquantity.selectedUnit.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0015]/items[at0025]/value']}">  						<f:selectItems value="#{archetypeBinder.dvquantity.unitsList.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0015]/items[at0025]/value']}" />					</h:selectOneMenu>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+			<div>Platelet result</div>
+			</td>
+			<td>
+				<h:inputText value="#{archetypeBinder.dvquantity.magnitude.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0015]/items[at0027]/value']}" ></h:inputText>					<h:selectOneMenu value="#{archetypeBinder.dvquantity.selectedUnit.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0015]/items[at0027]/value']}">  						<f:selectItems value="#{archetypeBinder.dvquantity.unitsList.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0015]/items[at0027]/value']}" />					</h:selectOneMenu>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+			<div>INR result</div>
+			</td>
+			<td>
+				<h:inputText value="#{archetypeBinder.dvquantity.magnitude.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0015]/items[at0028]/value']}" ></h:inputText>					<h:selectOneMenu value="#{archetypeBinder.dvquantity.selectedUnit.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0015]/items[at0028]/value']}">  						<f:selectItems value="#{archetypeBinder.dvquantity.unitsList.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0015]/items[at0028]/value']}" />					</h:selectOneMenu>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+			<div>other Haematology Result</div>
+			</td>
+			<td>
+				<h:selectOneMenu value="#{archetypeBinder.dvcodedtext.selectedCode.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0015]/items[at0007]/value']}">
+				<f:selectItems value="#{archetypeBinder.dvcodedtext.codesList.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0015]/items[at0007]/value']}" />
+				</h:selectOneMenu>
+			</td>
+		</tr>
+<tr><td colspan="2"><div>Biochemistry Order and Result</div></td></tr>
+
+		<tr>
+			<td>
+			<div>UandE order</div>
+			</td>
+			<td>
+				<h:selectBooleanCheckbox value="#{archetypeBinder.boolean.value.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0016]/items[at0029]/value/value']}"></h:selectBooleanCheckbox>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+			<div>Na Sodium result</div>
+			</td>
+			<td>
+				<h:inputText value="#{archetypeBinder.dvquantity.magnitude.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0016]/items[at0031]/value']}" ></h:inputText>					<h:selectOneMenu value="#{archetypeBinder.dvquantity.selectedUnit.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0016]/items[at0031]/value']}">  						<f:selectItems value="#{archetypeBinder.dvquantity.unitsList.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0016]/items[at0031]/value']}" />					</h:selectOneMenu>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+			<div>K potassium result</div>
+			</td>
+			<td>
+				<h:inputText value="#{archetypeBinder.dvquantity.magnitude.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0016]/items[at0032]/value']}" ></h:inputText>					<h:selectOneMenu value="#{archetypeBinder.dvquantity.selectedUnit.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0016]/items[at0032]/value']}">  						<f:selectItems value="#{archetypeBinder.dvquantity.unitsList.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0016]/items[at0032]/value']}" />					</h:selectOneMenu>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+			<div>U Urea result</div>
+			</td>
+			<td>
+				<h:inputText value="#{archetypeBinder.dvquantity.magnitude.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0016]/items[at0033]/value']}" ></h:inputText>					<h:selectOneMenu value="#{archetypeBinder.dvquantity.selectedUnit.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0016]/items[at0033]/value']}">  						<f:selectItems value="#{archetypeBinder.dvquantity.unitsList.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0016]/items[at0033]/value']}" />					</h:selectOneMenu>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+			<div>Creatinine Result</div>
+			</td>
+			<td>
+				<h:inputText value="#{archetypeBinder.dvquantity.magnitude.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0016]/items[at0034]/value']}" ></h:inputText>					<h:selectOneMenu value="#{archetypeBinder.dvquantity.selectedUnit.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0016]/items[at0034]/value']}">  						<f:selectItems value="#{archetypeBinder.dvquantity.unitsList.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0016]/items[at0034]/value']}" />					</h:selectOneMenu>
+			</td>
+		</tr>
+<tr><td colspan="2"><div>Radiology Orders and Results</div></td></tr>
+
+		<tr>
+			<td>
+			<div>Radiology Order</div>
+			</td>
+			<td>
+				<h:selectOneMenu value="#{archetypeBinder.dvtext.selectedText.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0017]/items[at0009]/value']}">				<f:selectItems value="#{archetypeBinder.dvtext.allowedValues.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0017]/items[at0009]/value']}" />
+				</h:selectOneMenu>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+			<div>other Radiology Order</div>
+			</td>
+			<td>
+				<h:selectOneMenu value="#{archetypeBinder.dvcodedtext.selectedCode.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0017]/items[at0035]/value']}">
+				<f:selectItems value="#{archetypeBinder.dvcodedtext.codesList.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0017]/items[at0035]/value']}" />
+				</h:selectOneMenu>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+			<div>Radiology Result</div>
+			</td>
+			<td>
+				<h:inputText value="#{archetypeBinder.dvtext.text.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0017]/items[at0018]/value']}"/>
+			</td>
+		</tr>
+		
+		<tr>
+			<td colspan="2" align="right">
+			<h:commandButton value="post me" action="#{archetypeBinder.performAction}"/>
+			</td>
+		</tr>
+</table>
+
+</h:form>
+	</body>
+</html>

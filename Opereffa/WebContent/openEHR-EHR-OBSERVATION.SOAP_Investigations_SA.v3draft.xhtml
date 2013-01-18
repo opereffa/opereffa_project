@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core" xml:lang="en" lang="en">
+	<ui:composition template="archetypeFormTemplate.xhtml">
+		<ui:define name="archetypeFormContent">
+<input id="archetypeFileName" type="hidden" value="openEHR-EHR-OBSERVATION.SOAP_Investigations_SA.v3draft.adl"/>
+<table>
+		<tr>
+			<td>
+			<div jsf2dojo="true" style="display:inline;" ><div>Oximetry</div></div>
+			</td>
+			<td>
+				<div jsf2dojo="true" style="display:inline;" ><h:inputText value="#{archetypeBinder.dvtext.text.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0004]/value']}"/></div>
+			</td>
+			<td>
+			
+			</td>
+
+		</tr>
+
+		<tr>
+			<td>
+			<div jsf2dojo="true" style="display:inline;" ><div>Blood Glucose</div></div>
+			</td>
+			<td>
+				<div jsf2dojo="true" style="display:inline;" ><h:inputText value="#{archetypeBinder.dvtext.text.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0036]/value']}"/></div>
+			</td>
+			<td>
+			
+			</td>
+
+		</tr>
+
+		<tr>
+			<td>
+			<div jsf2dojo="true" style="display:inline;" ><div>Urinalysis</div></div>
+			</td>
+			<td>
+				<div jsf2dojo="true" style="display:inline;" ><h:inputText value="#{archetypeBinder.dvtext.text.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0006]/value']}"/></div>
+			</td>
+			<td>
+			
+			</td>
+
+		</tr>
+<tr><td colspan="3"><div>ECG Order &amp; Result</div></td></tr>
+
+		<tr>
+			<td>
+			<div jsf2dojo="true" style="display:inline;" ><div>ECG Order</div></div>
+			</td>
+			<td>
+				<div jsf2dojo="true" style="display:inline;" ><h:selectBooleanCheckbox value="#{archetypeBinder.boolean.value.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0014]/items[at0020]/value/value']}"></h:selectBooleanCheckbox></div>
+			</td>
+			<td>
+			
+			</td>
+
+		</tr>
+
+		<tr>
+			<td>
+			<div jsf2dojo="true" style="display:inline;" ><div>ECG Result</div></div>
+			</td>
+			<td>
+				<div jsf2dojo="true" style="display:inline;" ><h:inputText value="#{archetypeBinder.dvtext.text.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0014]/items[at0005]/value']}"/></div>
+			</td>
+			<td>
+			
+			</td>
+
+		</tr>
+<tr><td colspan="3"><div>Haematology Order &amp; Result</div></td></tr>
+
+		<tr>
+			<td>
+			<div jsf2dojo="true" style="display:inline;" ><div>FBC Order</div></div>
+			</td>
+			<td>
+				<div jsf2dojo="true" style="display:inline;" ><h:selectBooleanCheckbox value="#{archetypeBinder.boolean.value.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0015]/items[at0021]/value/value']}"></h:selectBooleanCheckbox></div>
+			</td>
+			<td>
+			
+			</td>
+
+		</tr>
+
+		<tr>
+			<td>
+			<div jsf2dojo="true" style="display:inline;" ><div>Clotting order</div></div>
+			</td>
+			<td>
+				<div jsf2dojo="true" style="display:inline;" ><h:selectBooleanCheckbox value="#{archetypeBinder.boolean.value.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0015]/items[at0022]/value/value']}"></h:selectBooleanCheckbox></div>
+			</td>
+			<td>
+			
+			</td>
+
+		</tr>
+
+		<tr>
+			<td>
+			<div jsf2dojo="true" style="display:inline;" ><div>Group &amp; Save order</div></div>
+			</td>
+			<td>
+				<div jsf2dojo="true" style="display:inline;" ><h:selectBooleanCheckbox value="#{archetypeBinder.boolean.value.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0015]/items[at0023]/value/value']}"></h:selectBooleanCheckbox></div>
+			</td>
+			<td>
+			
+			</td>
+
+		</tr>
+
+		<tr>
+			<td>
+			<div jsf2dojo="true" style="display:inline;" ><div>Hb result</div></div>
+			</td>
+			<td>
+				<div jsf2dojo="true" style="display:inline;" ><h:inputText id="quantity173330707" value="#{archetypeBinder.dvquantity.magnitude.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0015]/items[at0024]/value']}" validator="#{connectorBean.validateNumeric}" ></h:inputText>					<h:selectOneMenu value="#{archetypeBinder.dvquantity.selectedUnit.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0015]/items[at0024]/value']}">  						<f:selectItems value="#{archetypeBinder.dvquantity.unitsList.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0015]/items[at0024]/value']}" />					</h:selectOneMenu></div>
+			</td>
+			<td>
+			<h:message style="color: red;" for="quantity173330707"/>
+			</td>
+
+		</tr>
+
+		<tr>
+			<td>
+			<div jsf2dojo="true" style="display:inline;" ><div>WCC result</div></div>
+			</td>
+			<td>
+				<div jsf2dojo="true" style="display:inline;" ><h:inputText id="quantity1916141042" value="#{archetypeBinder.dvquantity.magnitude.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0015]/items[at0025]/value']}" validator="#{connectorBean.validateNumeric}" ></h:inputText>					<h:selectOneMenu value="#{archetypeBinder.dvquantity.selectedUnit.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0015]/items[at0025]/value']}">  						<f:selectItems value="#{archetypeBinder.dvquantity.unitsList.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0015]/items[at0025]/value']}" />					</h:selectOneMenu></div>
+			</td>
+			<td>
+			<h:message style="color: red;" for="quantity1916141042"/>
+			</td>
+
+		</tr>
+
+		<tr>
+			<td>
+			<div jsf2dojo="true" style="display:inline;" ><div>Platelet result</div></div>
+			</td>
+			<td>
+				<div jsf2dojo="true" style="display:inline;" ><h:inputText id="quantity1106794416" value="#{archetypeBinder.dvquantity.magnitude.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0015]/items[at0027]/value']}" validator="#{connectorBean.validateNumeric}" ></h:inputText>					<h:selectOneMenu value="#{archetypeBinder.dvquantity.selectedUnit.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0015]/items[at0027]/value']}">  						<f:selectItems value="#{archetypeBinder.dvquantity.unitsList.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0015]/items[at0027]/value']}" />					</h:selectOneMenu></div>
+			</td>
+			<td>
+			<h:message style="color: red;" for="quantity1106794416"/>
+			</td>
+
+		</tr>
+
+		<tr>
+			<td>
+			<div jsf2dojo="true" style="display:inline;" ><div>INR result</div></div>
+			</td>
+			<td>
+				<div jsf2dojo="true" style="display:inline;" ><h:inputText id="quantity1445362545" value="#{archetypeBinder.dvquantity.magnitude.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0015]/items[at0028]/value']}" validator="#{connectorBean.validateNumeric}" ></h:inputText>					<h:selectOneMenu value="#{archetypeBinder.dvquantity.selectedUnit.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0015]/items[at0028]/value']}">  						<f:selectItems value="#{archetypeBinder.dvquantity.unitsList.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0015]/items[at0028]/value']}" />					</h:selectOneMenu></div>
+			</td>
+			<td>
+			<h:message style="color: red;" for="quantity1445362545"/>
+			</td>
+
+		</tr>
+
+		<tr>
+			<td>
+			<div jsf2dojo="true" style="display:inline;" ><div>other Haematology Result</div></div>
+			</td>
+			<td>
+				<div jsf2dojo="true" style="display:inline;" ><h:selectOneMenu value="#{archetypeBinder.dvcodedtext.selectedCode.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0015]/items[at0007]/value']}">
+				<f:selectItems value="#{archetypeBinder.dvcodedtext.codesList.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0015]/items[at0007]/value']}" />
+				</h:selectOneMenu></div>
+			</td>
+			<td>
+			
+			</td>
+
+		</tr>
+<tr><td colspan="3"><div>Biochemistry Order &amp; Result</div></td></tr>
+
+		<tr>
+			<td>
+			<div jsf2dojo="true" style="display:inline;" ><div>U&amp;E order</div></div>
+			</td>
+			<td>
+				<div jsf2dojo="true" style="display:inline;" ><h:selectBooleanCheckbox value="#{archetypeBinder.boolean.value.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0016]/items[at0029]/value/value']}"></h:selectBooleanCheckbox></div>
+			</td>
+			<td>
+			
+			</td>
+
+		</tr>
+
+		<tr>
+			<td>
+			<div jsf2dojo="true" style="display:inline;" ><div>Na Sodium result</div></div>
+			</td>
+			<td>
+				<div jsf2dojo="true" style="display:inline;" ><h:inputText id="quantity310676458" value="#{archetypeBinder.dvquantity.magnitude.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0016]/items[at0031]/value']}" validator="#{connectorBean.validateNumeric}" ></h:inputText>					<h:selectOneMenu value="#{archetypeBinder.dvquantity.selectedUnit.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0016]/items[at0031]/value']}">  						<f:selectItems value="#{archetypeBinder.dvquantity.unitsList.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0016]/items[at0031]/value']}" />					</h:selectOneMenu></div>
+			</td>
+			<td>
+			<h:message style="color: red;" for="quantity310676458"/>
+			</td>
+
+		</tr>
+
+		<tr>
+			<td>
+			<div jsf2dojo="true" style="display:inline;" ><div>K potassium result</div></div>
+			</td>
+			<td>
+				<div jsf2dojo="true" style="display:inline;" ><h:inputText id="quantity1432133877" value="#{archetypeBinder.dvquantity.magnitude.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0016]/items[at0032]/value']}" validator="#{connectorBean.validateNumeric}" ></h:inputText>					<h:selectOneMenu value="#{archetypeBinder.dvquantity.selectedUnit.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0016]/items[at0032]/value']}">  						<f:selectItems value="#{archetypeBinder.dvquantity.unitsList.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0016]/items[at0032]/value']}" />					</h:selectOneMenu></div>
+			</td>
+			<td>
+			<h:message style="color: red;" for="quantity1432133877"/>
+			</td>
+
+		</tr>
+
+		<tr>
+			<td>
+			<div jsf2dojo="true" style="display:inline;" ><div>U Urea result</div></div>
+			</td>
+			<td>
+				<div jsf2dojo="true" style="display:inline;" ><h:inputText id="quantity1120023084" value="#{archetypeBinder.dvquantity.magnitude.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0016]/items[at0033]/value']}" validator="#{connectorBean.validateNumeric}" ></h:inputText>					<h:selectOneMenu value="#{archetypeBinder.dvquantity.selectedUnit.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0016]/items[at0033]/value']}">  						<f:selectItems value="#{archetypeBinder.dvquantity.unitsList.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0016]/items[at0033]/value']}" />					</h:selectOneMenu></div>
+			</td>
+			<td>
+			<h:message style="color: red;" for="quantity1120023084"/>
+			</td>
+
+		</tr>
+
+		<tr>
+			<td>
+			<div jsf2dojo="true" style="display:inline;" ><div>Creatinine Result</div></div>
+			</td>
+			<td>
+				<div jsf2dojo="true" style="display:inline;" ><h:inputText id="quantity622787251" value="#{archetypeBinder.dvquantity.magnitude.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0016]/items[at0034]/value']}" validator="#{connectorBean.validateNumeric}" ></h:inputText>					<h:selectOneMenu value="#{archetypeBinder.dvquantity.selectedUnit.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0016]/items[at0034]/value']}">  						<f:selectItems value="#{archetypeBinder.dvquantity.unitsList.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0016]/items[at0034]/value']}" />					</h:selectOneMenu></div>
+			</td>
+			<td>
+			<h:message style="color: red;" for="quantity622787251"/>
+			</td>
+
+		</tr>
+<tr><td colspan="3"><div>Radiology Orders &amp; Results</div></td></tr>
+
+		<tr>
+			<td>
+			<div jsf2dojo="true" style="display:inline;" ><div>Radiology Order</div></div>
+			</td>
+			<td>
+				<div jsf2dojo="true" style="display:inline;" ><h:selectOneMenu value="#{archetypeBinder.dvtext.selectedText.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0017]/items[at0009]/value']}">				<f:selectItems value="#{archetypeBinder.dvtext.allowedValues.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0017]/items[at0009]/value']}" />
+				</h:selectOneMenu></div>
+			</td>
+			<td>
+			
+			</td>
+
+		</tr>
+
+		<tr>
+			<td>
+			<div jsf2dojo="true" style="display:inline;" ><div>other Radiology Order</div></div>
+			</td>
+			<td>
+				<div jsf2dojo="true" style="display:inline;" ><h:selectOneMenu value="#{archetypeBinder.dvcodedtext.selectedCode.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0017]/items[at0035]/value']}">
+				<f:selectItems value="#{archetypeBinder.dvcodedtext.codesList.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0017]/items[at0035]/value']}" />
+				</h:selectOneMenu></div>
+			</td>
+			<td>
+			
+			</td>
+
+		</tr>
+
+		<tr>
+			<td>
+			<div jsf2dojo="true" style="display:inline;" ><div>Radiology Result</div></div>
+			</td>
+			<td>
+				<div jsf2dojo="true" style="display:inline;" ><h:inputText value="#{archetypeBinder.dvtext.text.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0017]/items[at0018]/value']}"/></div>
+			</td>
+			<td>
+			
+			</td>
+
+		</tr>
+<tr>
+				<td colspan="2" align="right">
+				<div jsf2dojo="true" style="display:inline;" ><h:commandButton id="postit"  type="submit" value="#{connectorBean.modeLabel}" action="#{archetypeBinder.performAction}"/></div>
+				</td>
+			</tr></table></ui:define>		
+	</ui:composition>
+</html>

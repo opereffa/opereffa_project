@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core" xml:lang="en" lang="en">
+	<ui:composition>
+		
+		<div align="center">
+		<table width="100%">
+		<tr>
+			<td align="center"><h1>Welcome to Opereffa!</h1></td>
+		</tr>
+		<tr>
+			<td align="left">
+				<p class="opereffa">When you first open this demo page you are asked for a patient name. Unless you change this patient
+				with the change patient link on the top left, you will be working in the context of this patient. The patient name will be displayed in 
+				square brackets, just after the Change Patient link</p>
+				
+				<p class="opereffa">This three pane web page is the core of the User Interface in Opereffa. Even though it
+				looks very simple, it is designed to provide a consistent user experience, with emphasis on grouping functionality
+				around the way we use information. The left pane, where you can see categories like Observation, 
+				Instruction and Evaluation  connect you to clical concepts, expressed by Archetypes. The links under these 
+				categories display forms for data entry. These forms are created by Archetypes, and each click on a link on the left
+				pane means a new form. So if you click on a link, and enter data, and then click on another link <b>without saving your form</b> 
+				you would lose your data in the current form, since you asked for a clean, brand new form.</p>
+				
+				<p class="opereffa">If you display a form, enter data and click Save button, your data will be saved into database
+				for the patient name you have provided, and right pane will be updated. The right pane displays the last 20 records of the patient.
+				Immediately after a new form is saved, the form in the middle pane switches to edit mode for the last saved record.
+				So after the initial save, you can change the saved record, just in case you have given a wrong value, or want to change something.</p>
+				
+				<p class="opereffa">If you click on Update link on the right pane, for a record, a form that will 
+				let you edit that record will appear in the middle pane. You can update the record and click save, and you'll be updating the same
+				record unless you start a new one by clicking on a link from the left. The last updated record will have a grey background on the right hand pane.
+				</p>								
+				
+				<p class="opereffa">The right pane also contains two menus on the top, one for getting the last 20 records of the patient, and the 
+				other for accessing the reports connected to data saved by forms. At the moment only data saved with a single form is used by archetypes, 
+				and there are bugs related to handling of missing values. So you are advised to complete all fields in the test form (the one that says 
+				connected to reporting) and save it. After a couple of saves, you can test the reports to see what they look like. If you don't have the time, simply
+				change patient to "demouser" (without quotes), which has automatically generated records. (they are not very meaningful though) The report viewer 
+				will appear in the middle pane, and you can export reports to pdf, word, excel etc..</p>
+				
+				<p class="opereffa">So the left pane is the concept browser, the middle pane is the data entry, update and display pane, and the right pane is the overview pane
+				This layout is designed with a lot of enhancements in mind, like adding decision supoport related warnings to right hand pane, 
+				providing advanced search functionality for left pane etc.. The fundamental idea is to distribute functionality based on the roles of the panes in general.</p>
+								 				
+			</td>
+		</tr>		
+		</table>
+		</div>
+		
+				
+	</ui:composition>
+</html>

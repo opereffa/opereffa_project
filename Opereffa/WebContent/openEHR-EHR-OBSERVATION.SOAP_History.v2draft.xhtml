@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core" xml:lang="en" lang="en">
+	<ui:composition template="archetypeFormTemplate.xhtml">
+		<ui:define name="archetypeFormContent">
+<input id="archetypeFileName" type="hidden" value="openEHR-EHR-OBSERVATION.SOAP_History.v2draft.adl"/>
+<table><tr><td colspan="3"><div>Subjective History</div></td></tr>
+
+		<tr>
+			<td>
+			<div jsf2dojo="true" style="display:inline;" ><div>Presenting Complaint</div></div>
+			</td>
+			<td>
+				<div jsf2dojo="true" style="display:inline;" ><h:inputText value="#{archetypeBinder.dvtext.text.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0007]/items[at0004]/value']}"/></div>
+			</td>
+			<td>
+			
+			</td>
+
+		</tr>
+
+		<tr>
+			<td>
+			<div jsf2dojo="true" style="display:inline;" ><div>History of Presenting Complaint</div></div>
+			</td>
+			<td>
+				<div jsf2dojo="true" style="display:inline;" ><h:inputText value="#{archetypeBinder.dvtext.text.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0007]/items[at0005]/value']}"/></div>
+			</td>
+			<td>
+			
+			</td>
+
+		</tr>
+<tr><td colspan="3"><div>Review of Systems</div></td></tr>
+
+		<tr>
+			<td>
+			<div jsf2dojo="true" style="display:inline;" ><div>Common responses</div></div>
+			</td>
+			<td>
+				<div jsf2dojo="true" style="display:inline;" ><h:selectOneMenu value="#{archetypeBinder.dvtext.selectedText.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0007]/items[at0034]/items[at0035]/value']}">				<f:selectItems value="#{archetypeBinder.dvtext.allowedValues.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0007]/items[at0034]/items[at0035]/value']}" />
+				</h:selectOneMenu></div>
+			</td>
+			<td>
+			
+			</td>
+
+		</tr>
+
+		<tr>
+			<td>
+			<div jsf2dojo="true" style="display:inline;" ><div>other Review of Systems detail</div></div>
+			</td>
+			<td>
+				<div jsf2dojo="true" style="display:inline;" ><h:inputText value="#{archetypeBinder.dvtext.text.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0007]/items[at0034]/items[at0036]/value']}"/></div>
+			</td>
+			<td>
+			
+			</td>
+
+		</tr>
+<tr><td colspan="3"><div>Medication</div></td></tr>
+
+		<tr>
+			<td>
+			<div jsf2dojo="true" style="display:inline;" ><div>Medication</div></div>
+			</td>
+			<td>
+				<div jsf2dojo="true" style="display:inline;" ><h:selectOneMenu value="#{archetypeBinder.dvtext.selectedText.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0007]/items[at0025]/items[at0008]/value']}">				<f:selectItems value="#{archetypeBinder.dvtext.allowedValues.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0007]/items[at0025]/items[at0008]/value']}" />
+				</h:selectOneMenu></div>
+			</td>
+			<td>
+			
+			</td>
+
+		</tr>
+
+		<tr>
+			<td>
+			<div jsf2dojo="true" style="display:inline;" ><div>other medication detail</div></div>
+			</td>
+			<td>
+				<div jsf2dojo="true" style="display:inline;" ><h:inputText value="#{archetypeBinder.dvtext.text.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0007]/items[at0025]/items[at0016]/value']}"/></div>
+			</td>
+			<td>
+			
+			</td>
+
+		</tr>
+<tr><td colspan="3"><div>Allergy</div></td></tr>
+
+		<tr>
+			<td>
+			<div jsf2dojo="true" style="display:inline;" ><div>Allergy</div></div>
+			</td>
+			<td>
+				<div jsf2dojo="true" style="display:inline;" ><h:selectOneMenu value="#{archetypeBinder.dvcodedtext.selectedCode.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0007]/items[at0026]/items[at0006]/value']}">
+				<f:selectItems value="#{archetypeBinder.dvcodedtext.codesList.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0007]/items[at0026]/items[at0006]/value']}" />
+				</h:selectOneMenu></div>
+			</td>
+			<td>
+			
+			</td>
+
+		</tr>
+
+		<tr>
+			<td>
+			<div jsf2dojo="true" style="display:inline;" ><div>other Allergy detail</div></div>
+			</td>
+			<td>
+				<div jsf2dojo="true" style="display:inline;" ><h:inputText value="#{archetypeBinder.dvtext.text.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0007]/items[at0026]/items[at0019]/value']}"/></div>
+			</td>
+			<td>
+			
+			</td>
+
+		</tr>
+<tr><td colspan="3"><div>Medical History</div></td></tr>
+
+		<tr>
+			<td>
+			<div jsf2dojo="true" style="display:inline;" ><div>Medical History</div></div>
+			</td>
+			<td>
+				<div jsf2dojo="true" style="display:inline;" ><h:selectOneMenu value="#{archetypeBinder.dvtext.selectedText.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0007]/items[at0028]/items[at0010]/value']}">				<f:selectItems value="#{archetypeBinder.dvtext.allowedValues.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0007]/items[at0028]/items[at0010]/value']}" />
+				</h:selectOneMenu></div>
+			</td>
+			<td>
+			
+			</td>
+
+		</tr>
+
+		<tr>
+			<td>
+			<div jsf2dojo="true" style="display:inline;" ><div>other Medical History detail</div></div>
+			</td>
+			<td>
+				<div jsf2dojo="true" style="display:inline;" ><h:inputText value="#{archetypeBinder.dvtext.text.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0007]/items[at0028]/items[at0031]/value']}"/></div>
+			</td>
+			<td>
+			
+			</td>
+
+		</tr>
+<tr><td colspan="3"><div>Family History</div></td></tr>
+
+		<tr>
+			<td>
+			<div jsf2dojo="true" style="display:inline;" ><div>Family History</div></div>
+			</td>
+			<td>
+				<div jsf2dojo="true" style="display:inline;" ><h:selectOneMenu value="#{archetypeBinder.dvtext.selectedText.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0007]/items[at0032]/items[at0009]/value']}">				<f:selectItems value="#{archetypeBinder.dvtext.allowedValues.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0007]/items[at0032]/items[at0009]/value']}" />
+				</h:selectOneMenu></div>
+			</td>
+			<td>
+			
+			</td>
+
+		</tr>
+
+		<tr>
+			<td>
+			<div jsf2dojo="true" style="display:inline;" ><div>other Family History</div></div>
+			</td>
+			<td>
+				<div jsf2dojo="true" style="display:inline;" ><h:inputText value="#{archetypeBinder.dvtext.text.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0007]/items[at0032]/items[at0033]/value']}"/></div>
+			</td>
+			<td>
+			
+			</td>
+
+		</tr>
+<tr><td colspan="3"><div>Social History</div></td></tr>
+
+		<tr>
+			<td>
+			<div jsf2dojo="true" style="display:inline;" ><div>Social circumstance</div></div>
+			</td>
+			<td>
+				<div jsf2dojo="true" style="display:inline;" ><h:inputText value="#{archetypeBinder.dvtext.text.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0007]/items[at0013]/items[at0039]/value']}"/></div>
+			</td>
+			<td>
+			
+			</td>
+
+		</tr>
+
+		<tr>
+			<td>
+			<div jsf2dojo="true" style="display:inline;" ><div>Occupation</div></div>
+			</td>
+			<td>
+				<div jsf2dojo="true" style="display:inline;" ><h:inputText value="#{archetypeBinder.dvtext.text.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0007]/items[at0013]/items[at0037]/value']}"/></div>
+			</td>
+			<td>
+			
+			</td>
+
+		</tr>
+<tr><td colspan="3"><div>Alcohol</div></td></tr>
+
+		<tr>
+			<td>
+			<div jsf2dojo="true" style="display:inline;" ><div>Alcohol History</div></div>
+			</td>
+			<td>
+				<div jsf2dojo="true" style="display:inline;" ><h:selectOneMenu value="#{archetypeBinder.dvtext.selectedText.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0007]/items[at0013]/items[at0027]/items[at0014]/value']}">				<f:selectItems value="#{archetypeBinder.dvtext.allowedValues.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0007]/items[at0013]/items[at0027]/items[at0014]/value']}" />
+				</h:selectOneMenu></div>
+			</td>
+			<td>
+			
+			</td>
+
+		</tr>
+
+		<tr>
+			<td>
+			<div jsf2dojo="true" style="display:inline;" ><div>other Alcohol detail</div></div>
+			</td>
+			<td>
+				<div jsf2dojo="true" style="display:inline;" ><h:inputText value="#{archetypeBinder.dvtext.text.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0007]/items[at0013]/items[at0027]/items[at0015]/value']}"/></div>
+			</td>
+			<td>
+			
+			</td>
+
+		</tr>
+<tr><td colspan="3"><div>Smoking</div></td></tr>
+
+		<tr>
+			<td>
+			<div jsf2dojo="true" style="display:inline;" ><div>Smoking</div></div>
+			</td>
+			<td>
+				<div jsf2dojo="true" style="display:inline;" ><h:selectOneMenu value="#{archetypeBinder.dvtext.selectedText.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0007]/items[at0013]/items[at0040]/items[at0011]/value']}">				<f:selectItems value="#{archetypeBinder.dvtext.allowedValues.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0007]/items[at0013]/items[at0040]/items[at0011]/value']}" />
+				</h:selectOneMenu></div>
+			</td>
+			<td>
+			
+			</td>
+
+		</tr>
+
+		<tr>
+			<td>
+			<div jsf2dojo="true" style="display:inline;" ><div>other smoking detail</div></div>
+			</td>
+			<td>
+				<div jsf2dojo="true" style="display:inline;" ><h:inputText value="#{archetypeBinder.dvtext.text.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0007]/items[at0013]/items[at0040]/items[at0041]/value']}"/></div>
+			</td>
+			<td>
+			
+			</td>
+
+		</tr>
+
+		<tr>
+			<td>
+			<div jsf2dojo="true" style="display:inline;" ><div>Other substance use</div></div>
+			</td>
+			<td>
+				<div jsf2dojo="true" style="display:inline;" ><h:inputText value="#{archetypeBinder.dvtext.text.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0007]/items[at0013]/items[at0038]/value']}"/></div>
+			</td>
+			<td>
+			
+			</td>
+
+		</tr>
+<tr>
+				<td colspan="2" align="right">
+				<div jsf2dojo="true" style="display:inline;" ><h:commandButton id="postit"  type="submit" value="#{connectorBean.modeLabel}" action="#{archetypeBinder.performAction}"/></div>
+				</td>
+			</tr></table></ui:define>		
+	</ui:composition>
+</html>

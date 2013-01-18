@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core" xml:lang="en" lang="en">
+	<head>
+		<link href="#{facesContext.externalContext.request.contextPath}/styles/openEHR.css"
+	type="text/css" rel="stylesheet" />
+	<style type="text/css">
+		@import "#{facesContext.externalContext.request.contextPath}/scripts/dojo/dojo/resources/dojo.css";		
+		@import "#{facesContext.externalContext.request.contextPath}/scripts/dojo/dijit/themes/tundra/tundra.css";
+		@import "dndDefault.css";
+	</style>
+	<style type="text/css">
+      .dndContainer {
+    width: 100px;
+    display: block;
+  }
+
+  .clear {
+    clear: both;
+  }
+    </style>
+	<script type="text/javascript" src="#{facesContext.externalContext.request.contextPath}/scripts/dojo/dojo/dojo.js" djConfig="parseOnLoad: true, isDebug: false"></script>
+	<script language="JavaScript" type="text/javascript"
+		src="#{facesContext.externalContext.request.contextPath}/scripts/jsf2dojo_advanced.js"></script>	
+			
+			<script type="text/javascript"> 
+	//<![CDATA[ 		  
+		
+	 //]]> 
+	</script>	
+		</head>
+	<body class="tundra">
+		
+			<span onclick="getArchetypeForm(dojo.attr(this,'targetPage'));" targetPage="#{facesContext.externalContext.request.contextPath}/openEHR-EHR-OBSERVATION.soap_examinationsa2.v1draft.jsf">getPage</span>
+			<div dojoType="dijit.layout.ContentPane" sizeMin="50" sizeShare="60">
+			   <div dojoType="dijit.layout.ContentPane" id="openEHRContainer" hasShadow="true">
+  					Please select an archetype from the menu on the left.
+				</div>
+		</div>
+		
+		<div id="sessionId" style="display:none;" >#{test.guid}</div>
+		<div id="contextId" style="display:none;" >Test patient Id</div>
+		<div id="createdAt" style="display:none;" >#{test.currentDateTime}</div>
+		
+	</body>
+</html>

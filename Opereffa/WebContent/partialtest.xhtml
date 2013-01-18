@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core" xml:lang="en" lang="en">
+	<head>
+		<title>My Facelets Page</title>
+		<meta http-equiv="keywords" content="enter,your,keywords,here" />
+		<meta http-equiv="description"
+			content="A short description of this page." />
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+		<!--<link rel="stylesheet" type="text/css" href="styles.css">-->
+	</head>
+	<body>
+		
+	<f:view><p>
+			<ui:insert name="body">This is my JavaServer Facelets page.<h:form>
+						<h:inputText id="txtBox1" validator="#{test.validateTest}"></h:inputText>
+						<h:message id="validatorId" for="txtBox1"></h:message>
+						<br />
+						<h:inputText></h:inputText><br />
+						<h:commandButton></h:commandButton>
+					</h:form></ui:insert>
+		</p></f:view></body>
+</html>

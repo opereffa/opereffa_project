@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core" xml:lang="en" lang="en">
+	
+<f:view><ui:composition template="archetypeFormTemplate.xhtml">
+		<ui:define name="archetypeFormContent">
+<input id="archetypeFileName" type="hidden" value="openEHR-EHR-OBSERVATION.soap_examinationsa2.v1draft.adl" />
+		<a href="http://d2n4l54j.chime.ucl.ac.uk:8090/OpenEHRArchetypeJSF/lbtest.jsf">refresh</a>
+		<h:selectManyListbox value="#{test.selectedVals}" id="itemsList">
+		<f:selectItems value="#{test.mulSelectValues}" />
+		</h:selectManyListbox>
+					<h:commandButton type="submit" value="post it"></h:commandButton>
+					<span onclick="getSelectedItems();">click me</span>					
+					
+					<div style="float: left; margin: 5px;" id="dndLimitBox101629482">
+	
+			</div>
+			
+				
+</ui:define>		
+	</ui:composition></f:view></html>

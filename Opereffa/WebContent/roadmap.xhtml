@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core" xml:lang="en" lang="en">
+	<ui:composition template="OpereffaContentTemplate.xhtml">
+		<ui:define name="content">
+		<div align="center">
+		<table class="middleTable">
+		<tr>
+			<td align="center"><h1>Opereffa Roadmap</h1></td>
+		</tr>
+		<tr>
+			<td align="left">
+				<p class="opereffa">Opereffa has two subprojects, one of them is the clinical application, and the other one is the underlying technical framework. This page gives information about the roadmap for the technical framework. The roadmap for the clinical application will be shaped by the CRB, and will be included here when it becomes available. The following are the features/aspects which are being considered as future tasks in the implementation of the technical framework.</p>
+				
+				<p class="opereffa"><b>Terminology Integration:</b> It is almost impossible to develop a clinical application without considering terminology management, and openEHR includes quite flexible solutions for using terminologies. The use of Snomed CT is on the todo list for the near future, by using an open source terminology server. It is quite likely that this integration will be specific to a medical domain, and will be implemented incrementally.</p>
+				
+				<p class="opereffa"><b>Messaging:</b> Messaging standards in medical informatics have become a permanent required  functionality of information systems, and Opereffa is considered as a good candidate for experimenting with integration of HL7 based messaging with archetype based information systems. EN 13606 is also relevant in this context and also the use of especially HL7 V3 to explore the potential practical issues and benefits. This work item is also related to another one, legacy systems integration.</p>
+				
+				<p class="opereffa"><b>Integration with other systems:</b> Using Opereffa in the context of existing information systems has been an important requirement from the beginning of the project. Even though it is possible to build information systems from scratch using openEHR, there are many existing systems which will be in use for many years, and most new systems are not yet using openEHR. Therefore, developing a consistent method for integration with other systems is a clear requirement. This requirement impacts on many aspects of architecture and design, from selection of UI technologies to messaging requirements. In some integration scenarios, simple messaging is enough, but in others integration and synchronization among rich information models is necessary. For these cases, a messaging bus with sufficient capability is required, and exploration of these application scenarios is a work item on its own. Although it is not as yet demonstrated on this website, Opereffa is already running within Tolven, another open source clinical application platform. Future work will continue to outline issues and best practices for systems integration.</p>
+				
+				
+				<p class="opereffa"><b>Very large scale operations:</b> Considering the number of large scale healthcare projects, and the requirement for horizontal and vertical scaling, Opereffa has included very large scale storage and parallel processing in its target list of capabilities. At the moment, Hadoop, an open source implementation of Google's distributed storage and processing technology, is chosen as the technology. There are two aspects of this work item, migrating some of the common use cases like population level queries to a more scalable infrastructure, and performing advanced machine learning tasks on aggregate data, for improved decision support.</p>
+				
+				<p class="opereffa"><b>Eclipse Tooling:</b> Eclipse is chosen not only as a development environment, but also as a platform for Opereffa. There are many repetitive tasks and complex processes in Opereffa development, and as patterns of usage are identified, they are turned into tools. However, it is not wise to develop custom tools, since custom code is harder for third parties to contribute to, harder to explain and all enhancements have to come from the developer who develops the tool. The Eclipse platform has the capability to provide a set of well defined methods and technologies for tooling, and Opereffa will position all of its tools in this platform. Early versions of Opereffa included some tools for GUI generation, Archetype structure browsing etc. These tools are now being re-written for the latest version of the code base.</p>
+				
+				<p class="opereffa"><b>Incremental development of existing and new features:</b> Opereffa is at its very early stages at the moment, and its current features need improvement. Just to make this intention for improvement clear, work to improve existing capabilities is also included as a work item.</p>
+				  
+				
+				
+			</td>
+		</tr>		
+		</table>
+		</div>
+		
+		</ui:define>		
+	</ui:composition>
+</html>

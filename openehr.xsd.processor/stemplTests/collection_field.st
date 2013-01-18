@@ -1,0 +1,1 @@
+$field_name$:ARRAYED_LIST[$coll_type$]

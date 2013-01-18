@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core" xml:lang="en" lang="en">
+	<ui:composition template="OpereffaContentTemplate.xhtml">
+		<ui:define name="content">
+		<div align="center">
+		<table class="middleTable">
+		<tr>
+			<td align="center"><h1>Opereffa Architecture</h1></td>
+		</tr>
+		<tr>
+			<td align="left">
+				<p class="opereffa">Opereffa has two major groups of components. The first group is the set of classes that encapsulate framework type functionality. Mostly consisting of classes called wrappers, these classes use the existing openEHR Java Reference Implementation to provide additional functionality. Here additional functionality means persistence, GUI generation etc. The existing Java reference implementation contains an ADL parser, AOM classes and RM classes. In order to create a clinical application one needs to write code that will connect these components. For example: an archetype or a template has to be transformed into UI artifacts, data from the UI should be used to create RM class instances, validated by the AOM, and this data must be persisted. The wrapper classes (actually mediator or connector is a better name) contain functionality that connects these already existing classes. The goal is to create this new layer in a consistent way, so that it can be extended.</p>
+				  
+				  <p class="opereffa">The second group of components is used to connect the underlying framework to a Java web stack, Java Server Faces. Opereffa started as a proof of concept project with desktop clients in mind, but feedback from the CRB made it clear that a web based application would allow a much better discussion with CRB and related actors, since it is much more accessible. So Java Server Faces (using Facelets) was chosen as the GUI framework. The details of this layer will be outlined in a separate document. Therefore , there is a second layer on top of the first one which contains more UI oriented behaviour. This choice has shaped many design decisions in the underlying framework due to the stateless nature of web based applications, and it is not hard to see that, in the future, different layers for desktop applications or web services will cause additions to the underlying framework.</p>
+				 
+				 <p class="opereffa">Persistence functionality of Opereffa, at the application layer, is built on Hibernate, a well known Java object relational mapping tool. However, there are cases where JDBC is used. Postgresql, an open source RDMS is the other half of the persistence layer. Since the persistence layer is built with the highest possible granularity of archetype based data, performance problems become more likely to occur in comparison to less granular models of persistence. Therefore, the database server's capabilities, especially functions (stored procedures), are used as much as possible, and they will be used heavily in the future, too. 
+</p>
+				 
+				 <p class="opereffa">The architecture is likely to evolve towards improved software engineering practices over time; some of those employed at present are recognized as temporary expedients. This evolution will, it is intended be  driven by technical and clinical implementation requirements, coming from developers and CRB members.
+				 </p>
+				
+				
+			</td>
+		</tr>		
+		</table>
+		</div>
+		
+		</ui:define>		
+	</ui:composition>
+</html>

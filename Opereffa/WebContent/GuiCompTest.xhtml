@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core" xml:lang="en" lang="en">
+	<head>
+		<title>My Facelets Page</title>
+		<meta http-equiv="keywords" content="enter,your,keywords,here" />
+		<meta http-equiv="description"
+			content="A short description of this page." />
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+		<!--<link rel="stylesheet" type="text/css" href="styles.css">-->
+	</head>
+	<body>
+	
+		 
+	<f:view><p>
+				<h:form>
+					<div><h:inputText id="tstTxt" value="#{archetypeBinder.quantity.magnitude.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0016]/items[at0034]']}" ></h:inputText>
+					<h:selectOneMenu id="testCb" value="#{archetypeBinder.quantity.selectedUnit.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0016]/items[at0034]']}">
+  						<f:selectItems value="#{archetypeBinder.quantity.unitsList.inNode['/data[at0001]/events[at0002]/data[at0003]/items[at0016]/items[at0034]']}" />
+					</h:selectOneMenu>
+					<h:message for="tstTxt" ></h:message><br /><h:messages></h:messages>
+					</div>
+					<h:commandButton value="post me"  action="#{archetypeBinder.performAction}"></h:commandButton>
+					
+
+					</h:form> 
+	
+	</p><h:form>
+				
+			</h:form></f:view></body>
+</html>

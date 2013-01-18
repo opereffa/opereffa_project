@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            id="OpenEHRTools.testActionSet"
+            label="Test Action"
+            visible="true">
+             <menu
+               id="OpenEHRTools.mainmenu"
+               label="OpenEHR"
+               path="Create JSF Artifact">
+            <separator
+                  name="OpenEHRTools.mainmenu.slot1">
+            </separator>
+         </menu>
+         <action
+               class="uk.ac.ucl.chime.openehr.action.TestActionDelegate"
+               id="OpenEHRTools.action1"
+               label="Create JSF Artifact"
+               menubarPath="OpenEHRTools.mainmenu/OpenEHRTools.mainmenu.slot1"
+               toolbarPath="openEHR">
+         </action> 
+      </actionSet>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            id="OpenEHRTools.maincategory"
+            name="OpenEHR">
+      </category>
+      <view
+            category="OpenEHRTools.maincategory"
+            class="uk.ac.ucl.chime.openehr.view.ArchetypeOutlineView"
+            id="OpenEHRTools.archetypeOverview"
+            name="Archetype Outline">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.help.contexts">
+      <contexts
+            file="helpcontexts.xml"
+            plugin="OpenEHRTools">
+      </contexts>
+   </extension>
+   <extension
+         point="org.eclipse.help.toc">
+      <toc
+            extradir="helpcontent"
+            file="helpcontent/toc.xml"
+            primary="true">
+      </toc>
+   </extension>
+   <extension
+         point="org.eclipse.help.base.luceneSearchParticipants">
+      <searchParticipant
+            extensions="xhtml"
+            id="org.eclipse.help.internal.search.XHTMLSearchParticipant"
+            name="XHTML Participant"
+            participant="org.eclipse.help.internal.search.XHTMLSearchParticipant">
+      </searchParticipant>
+   </extension>
+   <extension
+         point="org.eclipse.help.contentProducer">
+      <binding
+            producerId="org.eclipse.help.dynamic">
+      </binding>
+   </extension>
+
+</plugin>

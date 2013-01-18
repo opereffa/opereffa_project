@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="/Libraries/opereffaLibs/openEHRRefImp/adl-parser-1.0.5-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="/Libraries/opereffaLibs/openEHRRefImp/adl-serializer-0.1-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="/Libraries/opereffaLibs/openEHRRefImp/measure-serv-0.1-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="/Libraries/opereffaLibs/openEHRRefImp/mini-termserv-0.1-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="/Libraries/opereffaLibs/openEHRRefImp/openehr-aom-0.1-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="/Libraries/opereffaLibs/openEHRRefImp/openehr-ap-0.1-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="/Libraries/opereffaLibs/openEHRRefImp/openehr-rm-core-0.1-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="/Libraries/opereffaLibs/openEHRRefImp/openehr-rm-domain-0.1-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="/Libraries/opereffaLibs/openEHRRefImp/rm-builder-0.1-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="/Libraries/opereffaLibs/openEHRRefImp/xml-serializer-0.1-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="/Libraries/opereffaLibs/liboutputs/DBPojos.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Tomcat v6.0 for Opereffa IP">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.web"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.6.0_25">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>

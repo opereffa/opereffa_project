@@ -1,0 +1,358 @@
+note
+	description: "Summary description for {RAWDATA_WRAPPER_GEN}."
+	author: ""
+	date: "$Date$"
+	revision: "$Revision$"
+
+class
+	RAWDATA_WRAPPER_GEN
+inherit
+	PB_OBJECT_WRAPPER
+	redefine
+		cpp_serialize_pb_object_to_string, deserialize_pb_object_from_string
+	end
+
+	MEMORY
+	redefine
+		dispose
+	end
+
+create
+	make
+
+feature --init
+	make
+	do
+	end
+
+feature--collections for repeated members
+
+feature --collection accessors
+
+
+
+feature --repeating field adders
+
+feature --message type members
+
+feature {NONE} --pritimive type fields
+string_val:STRING
+
+integer_val:INTEGER
+
+feature --primitive type accessors
+
+string_value:STRING
+do
+	Result := string_val
+end
+
+set_string_value(p_val:STRING)
+do
+	string_val := p_val
+end
+
+integer_value:INTEGER
+do
+	Result := integer_val
+end
+
+set_integer_value(p_val:INTEGER)
+do
+	integer_val := p_val
+end
+
+feature --access
+	get_typeinfo:STRING
+	do
+		Result := get_typeinfo_from_pb_object(get_protoc_ptr)
+	end
+
+	set_typeinfo(p_value: STRING)
+	local
+		p_value_to_c:ANY
+	do
+		p_value_to_c := p_value.to_c
+		set_typeinfo_in_pb_object(get_protoc_ptr, $p_value_to_c, p_value.count)
+	end
+
+
+	get_msgdata:POINTER
+	local
+		ptr : POINTER
+	do
+		ptr := get_msgdata_cpp_ptr(get_protoc_ptr)
+		Result := ptr
+	end
+
+	get_msgdata_size:INTEGER
+	do
+		Result := get_msgdata_size_cpp(get_protoc_ptr)
+	end
+
+	set_msgdata(p_msgdata_ptr:POINTER; p_msgdata_size:INTEGER)
+	do
+		set_msgdata_cpp(get_protoc_ptr, p_msgdata_ptr, p_msgdata_size)
+	end
+
+	get_msgdata_cpp_ptr(p_cpp_obj:POINTER):POINTER
+	external
+		"C++ inline use %"ProtocolBuffersStubs-Eiffel.h%""
+	alias
+		"[
+			bosphorus::RAWDATA* objPtr = (bosphorus::RAWDATA *)$p_cpp_obj;
+			
+			if(objPtr->has_msgdata())
+				return (void*)(objPtr->msgdata().data());
+			else
+				return NULL;
+		]"
+	end
+
+	get_msgdata_size_cpp(p_cpp_obj:POINTER):INTEGER
+	external
+		"C++ inline use %"ProtocolBuffersStubs-Eiffel.h%""
+	alias
+		"[
+			bosphorus::RAWDATA* objPtr = (bosphorus::RAWDATA *)$p_cpp_obj;
+			
+			if(objPtr->has_msgdata())
+				return objPtr->msgdata().size();
+			else
+				return 0;
+		]"
+	end
+
+	set_msgdata_cpp(p_cpp_obj:POINTER; p_msgdata_ptr:POINTER; p_msgdata_size:INTEGER)
+	external
+		"C++ inline use %"ProtocolBuffersStubs-Eiffel.h%""
+	alias
+		"[
+			bosphorus::RAWDATA* objPtr = (bosphorus::RAWDATA *)$p_cpp_obj;
+			
+			const int size = $p_msgdata_size;
+			void* arr = (void*)$p_msgdata_ptr;
+			
+			objPtr->set_msgdata(arr, size);
+		]"
+	end
+
+
+
+
+
+feature --enum wrappers
+
+
+
+
+
+
+
+
+
+
+
+feature --access helpers
+	set_typeinfo_in_pb_object(p_cpp_obj:POINTER; c_str:POINTER; size:INTEGER)
+	external
+		"C++ inline use %"ProtocolBuffersStubs-Eiffel.h%""
+	alias
+		"[
+			bosphorus::RAWDATA* objPtr = (bosphorus::RAWDATA *)$p_cpp_obj;
+			
+			char* str = new char [ $size ];//this str will belong to protocol buffer object, so don't delete it here.
+			memcpy( (void*)str, $c_str, $size);												
+			objPtr->set_typeinfo(str,$size);
+			
+			//the following block is now obsolete, since it can't
+			//properly handle string serialization of binary data. 
+			
+			//copy str to make sure that it is not collected by eiffel somewhere else
+			//std::string* str = new std::string((char*)$c_str);		
+			//objPtr->set_typeinfo(str->c_str());
+			//delete str;
+		]"
+	end
+
+	get_typeinfo_from_pb_object(p_cpp_obj:POINTER): STRING
+	external
+		"C++ inline use %"ProtocolBuffersStubs-Eiffel.h%""
+	alias "[
+			bosphorus::RAWDATA* objPtr = (bosphorus::RAWDATA *)$p_cpp_obj;
+			size_t len = objPtr->typeinfo().length();
+			char* tmp = new char [ len + 1 ];
+			strcpy( tmp, objPtr->typeinfo().c_str() );
+			
+			EIF_REFERENCE strToReturn = eif_string(tmp);
+			delete[] tmp;//no need for this char arr now
+			return strToReturn;
+		]"
+	end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+feature --pb helpers
+	test_pb_obj
+	do
+		--empty for now
+	end
+
+	get_pb_object_size:INTEGER
+	do
+		Result := get_pb_byte_size (get_protoc_ptr)
+	end
+
+	create_pb_object:POINTER
+	external
+		"C++ inline use %"ProtocolBuffersStubs-Eiffel.h%""
+	alias
+		"[
+		  bosphorus::RAWDATA* pbObj  = new bosphorus::RAWDATA();		  			
+		  return pbObj;
+		]"
+
+	end
+
+	serialize_pb_object(p_byte_arr:POINTER)
+	do
+		cpp_serialize_pb_object(p_byte_arr,get_protoc_ptr, get_pb_object_size)
+	end
+
+	cpp_serialize_pb_object(p_byte_arr:POINTER; pb_object:POINTER; p_size:INTEGER)
+	external
+		"C++ inline use %"ProtocolBuffersStubs-Eiffel.h%""
+	alias
+		"[
+		  bosphorus::RAWDATA* pbObj  = (bosphorus::RAWDATA*)$pb_object;
+		  const int size = $p_size;
+		  byte* arr = (byte*)$p_byte_arr;
+		  pbObj->SerializeToArray(arr,size);
+
+		]"
+
+	end
+
+
+
+	cpp_serialize_pb_object_to_string(pb_object:POINTER):STRING
+	external
+		"C++ inline use %"ProtocolBuffersStubs-Eiffel.h%""
+	alias
+		"[
+		  bosphorus::RAWDATA* pbObj  = (bosphorus::RAWDATA*)$pb_object;	  
+		  //serialize to string 
+		  std::string s = pbObj -> SerializeAsString();		 
+		  size_t len = s.length();
+		  char* tmp = new char [ len ]; //normally it should be len + 1, but this is not supposed to be used as a string, it is just for serialization
+		  //strcpy( tmp, s.c_str() );//terminates string when it sees a 0, but serialization may add 0s all along the char array, so use memcpy
+		  memcpy( (void*)tmp, s.c_str(), len);
+		  
+		  //the following is for debug use, to inspect the content of string serialization
+		  //std::ofstream myfile;
+		  //myfile.open ("c:\tmp\pbserialized.txt",std::ios::binary);
+		  //myfile.write(tmp, len);	  
+		  //myfile.close();
+		  
+		  //EIF_REFERENCE strToReturn = eif_string(tmp); //eif_string uses strcpy, and terminates the string when it sees a 0. Serialization of 
+		  //boolean fields may introduce 0s, so we use RTMS_EX
+		  
+		  EIF_REFERENCE strToReturn = RTMS_EX(tmp, len);
+		  delete[] tmp;//no need for this char array now
+		  return strToReturn;
+
+		]"
+
+	end
+
+	get_pb_byte_size(pb_object:POINTER):INTEGER
+	external
+		"C++ inline use %"ProtocolBuffersStubs-Eiffel.h%""
+	alias
+		"[
+		  bosphorus::RAWDATA* pbObj  = (bosphorus::RAWDATA*)$pb_object;
+		  return pbObj->ByteSize();
+
+		]"
+
+	end
+
+	release_cpp_object(pb_object:POINTER)
+	external
+		"C++ inline use %"ProtocolBuffersStubs-Eiffel.h%""
+	alias
+		"[
+		  bosphorus::RAWDATA* pbObj  = (bosphorus::RAWDATA*)$pb_object;
+		  delete pbObj;
+		]"
+
+	end
+
+	cpp_deserialize_pb_object(p_byte_arr:POINTER; p_size:INTEGER):POINTER
+	external
+		"C++ inline use %"ProtocolBuffersStubs-Eiffel.h%""
+	alias
+		"[
+			bosphorus::RAWDATA* pbObj = new bosphorus::RAWDATA();			
+			const int size = $p_size;
+			byte* arr = (byte*)$p_byte_arr;
+			pbObj->ParseFromArray(arr,size);
+			return pbObj;
+		]"
+	end
+
+	deserialize_pb_object_from_string(p_string:STRING):BOOLEAN
+	external
+		"C++ inline use %"ProtocolBuffersStubs-Eiffel.h%""
+	alias
+		"[
+			bosphorus::RAWDATA* pbObj = new bosphorus::RAWDATA();			
+			std::string str((char*)$p_string);					
+			return (pbObj->ParseFromString(str));
+		]"
+	end
+
+	dispose
+	do
+		if is_root_object then
+			release_cpp_object(get_protoc_ptr)
+		end
+	end
+
+end

@@ -1,0 +1,927 @@
+package bosphorus;
+//REMEMBER: namespace = and operator = should be prepended with _ or something else, these are keywords for c++ (at least under windows with MS compiler)
+message LOCATABLEREF{
+	optional string path = 1;
+	//the following fields are inherited from base types
+	required OBJECTIDALTERNATIVES id = 2;
+	required string namespace = 3;
+	required string type = 4;
+}
+message DVTEXT{
+	required string value = 1;
+	optional DVURI hyperlink = 2;
+	optional string formatting = 3;
+	repeated TERMMAPPING mappings = 4;
+	optional CODEPHRASE language = 5;
+	optional CODEPHRASE encoding = 6;
+	//the following fields are inherited from base types
+}
+message CREAL{
+	repeated string list = 1;
+	optional IntervalOfReal range = 2;
+	optional string assumedvalue = 3;
+	//the following fields are inherited from base types
+}
+message DVORDERED{
+	optional DVINTERVAL normalrange = 1;
+	repeated REFERENCERANGE otherreferenceranges = 2;
+	optional CODEPHRASE normalstatus = 3;
+	//the following fields are inherited from base types
+}
+message CTIME{
+	optional string pattern = 1;
+	optional string timezonevalidity = 2;
+	optional IntervalOfTime range = 3;
+	optional string assumedvalue = 4;
+	//the following fields are inherited from base types
+}
+message ConstraintBindingSet{
+	repeated CONSTRAINTBINDINGITEM items = 1;
+	optional string terminology = 2;
+	//the following fields are inherited from base types
+}
+message OBJECTID{
+	required string value = 1;
+	//the following fields are inherited from base types
+}
+message CINTEGER{
+	repeated int32 list = 1;
+	optional IntervalOfInteger range = 2;
+	optional int32 assumedvalue = 3;
+	//the following fields are inherited from base types
+}
+message DVBOOLEAN{
+	optional bool value = 1;
+	//the following fields are inherited from base types
+}
+message CCOMPLEXOBJECT{
+	repeated CATTRIBUTEALTERNATIVES attributes = 1;
+	//the following fields are inherited from base types
+	required string rmtypename = 2;
+	required IntervalOfInteger occurrences = 3;
+	required string nodeid = 4;
+}
+message HIEROBJECTID{
+	//the following fields are inherited from base types
+	required string value = 1;
+}
+message RESOURCEDESCRIPTION{
+	repeated StringDictionaryItem originalauthor = 1;
+	repeated string othercontributors = 2;
+	required string lifecyclestate = 3;
+	optional string resourcepackageuri = 4;
+	repeated StringDictionaryItem otherdetails = 5;
+	repeated RESOURCEDESCRIPTIONITEM details = 6;
+	optional AUTHOREDRESOURCE parentresource = 7;
+	//the following fields are inherited from base types
+}
+message ATTESTATION{
+	optional DVMULTIMEDIA attestedview = 1;
+	optional string proof = 2;
+	repeated DVEHRURI items = 3;
+	required DVTEXT reason = 4;
+	optional bool ispending = 5;
+	//the following fields are inherited from base types
+	required string systemid = 6;
+	required PARTYPROXYALTERNATIVES committer = 7;
+	required DVDATETIME timecommitted = 8;
+	required DVCODEDTEXT changetype = 9;
+	optional DVTEXT description = 10;
+}
+message TERMINALSTATE{
+	//the following fields are inherited from base types
+	required string name = 1;
+}
+message CDEFINEDOBJECT{
+	//the following fields are inherited from base types
+	required string rmtypename = 1;
+	required IntervalOfInteger occurrences = 2;
+	required string nodeid = 3;
+}
+message ACCESSGROUPREF{
+	//the following fields are inherited from base types
+	required OBJECTIDALTERNATIVES id = 1;
+	required string namespace = 2;
+	required string type = 3;
+}
+message ARCHETYPESLOT{
+	repeated ASSERTION includes = 1;
+	repeated ASSERTION excludes = 2;
+	//the following fields are inherited from base types
+	required string rmtypename = 3;
+	required IntervalOfInteger occurrences = 4;
+	required string nodeid = 5;
+}
+message ARCHETYPEINTERNALREF{
+	required string targetpath = 1;
+	//the following fields are inherited from base types
+	required string rmtypename = 2;
+	required IntervalOfInteger occurrences = 3;
+	required string nodeid = 4;
+}
+message STATE{
+	required string name = 1;
+	//the following fields are inherited from base types
+}
+message DVMULTIMEDIA{
+	optional string alternatetext = 1;
+	optional DVURI uri = 2;
+	repeated string data = 3;
+	required CODEPHRASE mediatype = 4;
+	optional CODEPHRASE compressionalgorithm = 5;
+	repeated string integritycheck = 6;
+	optional CODEPHRASE integritycheckalgorithm = 7;
+	optional int32 size = 8;
+	optional DVMULTIMEDIA thumbnail = 9;
+	//the following fields are inherited from base types
+	optional CODEPHRASE charset = 10;
+	optional CODEPHRASE language = 11;
+}
+message REVISIONHISTORYITEM{
+	required OBJECTVERSIONID versionid = 1;
+	repeated AUDITDETAILS audits = 2;
+	//the following fields are inherited from base types
+}
+message TERMINOLOGYID{
+	//the following fields are inherited from base types
+	required string value = 1;
+}
+message DVTIMESPECIFICATION{
+	required DVPARSABLE value = 1;
+	//the following fields are inherited from base types
+}
+message COBJECT{
+	required string rmtypename = 1;
+	required IntervalOfInteger occurrences = 2;
+	required string nodeid = 3;
+	//the following fields are inherited from base types
+}
+message CCODEPHRASE{
+	optional CODEPHRASE assumedvalue = 1;
+	optional TERMINOLOGYID terminologyid = 2;
+	repeated string codelist = 3;
+	//the following fields are inherited from base types
+	required string rmtypename = 4;
+	required IntervalOfInteger occurrences = 5;
+	required string nodeid = 6;
+}
+message CARDINALITY{
+	optional bool isordered = 1;
+	optional bool isunique = 2;
+	required IntervalOfInteger interval = 3;
+	//the following fields are inherited from base types
+}
+message StringDictionaryItem{
+	optional string value = 1;
+	optional string id = 2;
+	//the following fields are inherited from base types
+}
+message PARTICIPATION{
+	required DVTEXT function = 1;
+	required PARTYPROXYALTERNATIVES performer = 2;
+	optional DVINTERVAL time = 3;
+	required DVCODEDTEXT mode = 4;
+	//the following fields are inherited from base types
+}
+message CQUANTITYITEM{
+	optional IntervalOfReal magnitude = 1;
+	optional IntervalOfInteger precision = 2;
+	required string units = 3;
+	//the following fields are inherited from base types
+}
+message DVQUANTIFIED{
+	optional string magnitudestatus = 1;
+	//the following fields are inherited from base types
+	optional DVINTERVAL normalrange = 2;
+	repeated REFERENCERANGE otherreferenceranges = 3;
+	optional CODEPHRASE normalstatus = 4;
+}
+message CDATETIME{
+	optional string pattern = 1;
+	optional string timezonevalidity = 2;
+	optional IntervalOfDateTime range = 3;
+	optional string assumedvalue = 4;
+	//the following fields are inherited from base types
+}
+message CSINGLEATTRIBUTE{
+	//the following fields are inherited from base types
+	required string rmattributename = 1;
+	required IntervalOfInteger existence = 2;
+	repeated COBJECTALTERNATIVES children = 3;
+}
+message CDOMAINTYPE{
+	//the following fields are inherited from base types
+	required string rmtypename = 1;
+	required IntervalOfInteger occurrences = 2;
+	required string nodeid = 3;
+}
+message CDVQUANTITY{
+	optional DVQUANTITY assumedvalue = 1;
+	optional CODEPHRASE property = 2;
+	repeated CQUANTITYITEM list = 3;
+	//the following fields are inherited from base types
+	required string rmtypename = 4;
+	required IntervalOfInteger occurrences = 5;
+	required string nodeid = 6;
+}
+message OBJECTVERSIONID{
+	//the following fields are inherited from base types
+	required string value = 1;
+}
+message EXPROPERATOR{
+	required string operator = 1;
+	optional bool precedenceoverridden = 2;
+	//the following fields are inherited from base types
+	required string type = 3;
+}
+message DVDATETIME{
+	required string value = 1;
+	//the following fields are inherited from base types
+	optional DVINTERVAL normalrange = 2;
+	repeated REFERENCERANGE otherreferenceranges = 3;
+	optional CODEPHRASE normalstatus = 4;
+	optional string magnitudestatus = 5;
+	optional DVDURATION accuracy = 6;
+}
+message IntervalOfDateTime{
+	optional string lower = 1;
+	optional string upper = 2;
+	//the following fields are inherited from base types
+	optional bool lowerincluded = 3;
+	optional bool upperincluded = 4;
+	optional bool lowerunbounded = 5;
+	optional bool upperunbounded = 6;
+}
+message PARTYSELF{
+	//the following fields are inherited from base types
+	optional PARTYREF externalref = 1;
+}
+message DVTEMPORAL{
+	optional DVDURATION accuracy = 1;
+	//the following fields are inherited from base types
+	optional DVINTERVAL normalrange = 2;
+	repeated REFERENCERANGE otherreferenceranges = 3;
+	optional CODEPHRASE normalstatus = 4;
+	optional string magnitudestatus = 5;
+}
+message OBJECTREF{
+	required OBJECTIDALTERNATIVES id = 1;
+	required string namespace = 2;
+	required string type = 3;
+	//the following fields are inherited from base types
+}
+message CBOOLEAN{
+	optional bool truevalid = 1;
+	optional bool falsevalid = 2;
+	optional bool assumedvalue = 3;
+	//the following fields are inherited from base types
+}
+message PARTYREF{
+	//the following fields are inherited from base types
+	required OBJECTIDALTERNATIVES id = 1;
+	required string namespace = 2;
+	required string type = 3;
+}
+message IntervalOfDate{
+	optional string lower = 1;
+	optional string upper = 2;
+	//the following fields are inherited from base types
+	optional bool lowerincluded = 3;
+	optional bool upperincluded = 4;
+	optional bool lowerunbounded = 5;
+	optional bool upperunbounded = 6;
+}
+message IntervalOfInteger{
+	optional int32 lower = 1;
+	optional int32 upper = 2;
+	//the following fields are inherited from base types
+	optional bool lowerincluded = 3;
+	optional bool upperincluded = 4;
+	optional bool lowerunbounded = 5;
+	optional bool upperunbounded = 6;
+}
+message DVCODEDTEXT{
+	required CODEPHRASE definingcode = 1;
+	//the following fields are inherited from base types
+	required string value = 2;
+	optional DVURI hyperlink = 3;
+	optional string formatting = 4;
+	repeated TERMMAPPING mappings = 5;
+	optional CODEPHRASE language = 6;
+	optional CODEPHRASE encoding = 7;
+}
+message ARCHETYPEONTOLOGY{
+	repeated CodeDefinitionSet termdefinitions = 1;
+	repeated CodeDefinitionSet constraintdefinitions = 2;
+	repeated TermBindingSet termbindings = 3;
+	repeated ConstraintBindingSet constraintbindings = 4;
+	//the following fields are inherited from base types
+}
+message DVPERIODICTIMESPECIFICATION{
+	//the following fields are inherited from base types
+	required DVPARSABLE value = 1;
+}
+message REVISIONHISTORY{
+	repeated REVISIONHISTORYITEM items = 1;
+	//the following fields are inherited from base types
+}
+message DVDATE{
+	required string value = 1;
+	//the following fields are inherited from base types
+	optional DVINTERVAL normalrange = 2;
+	repeated REFERENCERANGE otherreferenceranges = 3;
+	optional CODEPHRASE normalstatus = 4;
+	optional string magnitudestatus = 5;
+	optional DVDURATION accuracy = 6;
+}
+message CMULTIPLEATTRIBUTE{
+	required CARDINALITY cardinality = 1;
+	//the following fields are inherited from base types
+	required string rmattributename = 2;
+	required IntervalOfInteger existence = 3;
+	repeated COBJECTALTERNATIVES children = 4;
+}
+message DVGENERALTIMESPECIFICATION{
+	//the following fields are inherited from base types
+	required DVPARSABLE value = 1;
+}
+message PARTYPROXY{
+	optional PARTYREF externalref = 1;
+	//the following fields are inherited from base types
+}
+message ASSERTIONVARIABLE{
+	required string name = 1;
+	required string definition = 2;
+	//the following fields are inherited from base types
+}
+message AUDITDETAILS{
+	required string systemid = 1;
+	required PARTYPROXYALTERNATIVES committer = 2;
+	required DVDATETIME timecommitted = 3;
+	required DVCODEDTEXT changetype = 4;
+	optional DVTEXT description = 5;
+	//the following fields are inherited from base types
+}
+message ARCHETYPEID{
+	//the following fields are inherited from base types
+	required string value = 1;
+}
+message CDVORDINAL{
+	optional DVORDINAL assumedvalue = 1;
+	repeated DVORDINAL list = 2;
+	//the following fields are inherited from base types
+	required string rmtypename = 3;
+	required IntervalOfInteger occurrences = 4;
+	required string nodeid = 5;
+}
+message DVSTATE{
+	required DVCODEDTEXT value = 1;
+	optional bool isterminal = 2;
+	//the following fields are inherited from base types
+}
+message CONSTRAINTREF{
+	required string reference = 1;
+	//the following fields are inherited from base types
+	required string rmtypename = 2;
+	required IntervalOfInteger occurrences = 3;
+	required string nodeid = 4;
+}
+message CodeDefinitionSet{
+	repeated ARCHETYPETERM items = 1;
+	optional string language = 2;
+	//the following fields are inherited from base types
+}
+message TERMBINDINGITEM{
+	required CODEPHRASE value = 1;
+	optional string code = 2;
+	//the following fields are inherited from base types
+}
+message ARCHETYPE{
+	optional HIEROBJECTID uid = 1;
+	required ARCHETYPEID archetypeid = 2;
+	optional string adlversion = 3;
+	required string concept = 4;
+	optional ARCHETYPEID parentarchetypeid = 5;
+	required CCOMPLEXOBJECT definition = 6;
+	repeated ASSERTION invariants = 7;
+	required ARCHETYPEONTOLOGY ontology = 8;
+	//the following fields are inherited from base types
+	required CODEPHRASE originallanguage = 9;
+	optional bool iscontrolled = 10;
+	optional RESOURCEDESCRIPTION description = 11;
+	repeated TRANSLATIONDETAILS translations = 12;
+	optional REVISIONHISTORY revisionhistory = 13;
+}
+message NONTERMINALSTATE{
+	repeated TRANSITION transitions = 1;
+	//the following fields are inherited from base types
+	required string name = 2;
+}
+message TermBindingSet{
+	repeated TERMBINDINGITEM items = 1;
+	optional string terminology = 2;
+	//the following fields are inherited from base types
+}
+message CDVSTATE{
+	optional DVSTATE assumedvalue = 1;
+	required STATEMACHINE value = 2;
+	//the following fields are inherited from base types
+	required string rmtypename = 3;
+	required IntervalOfInteger occurrences = 4;
+	required string nodeid = 5;
+}
+message TEMPLATEID{
+	//the following fields are inherited from base types
+	required string value = 1;
+}
+message DVPROPORTION{
+	optional string numerator = 1;
+	optional string denominator = 2;
+	required string type = 3;
+	optional int32 precision = 4;
+	//the following fields are inherited from base types
+	optional DVINTERVAL normalrange = 5;
+	repeated REFERENCERANGE otherreferenceranges = 6;
+	optional CODEPHRASE normalstatus = 7;
+	optional string magnitudestatus = 8;
+	optional string accuracy = 9;
+	optional bool accuracyispercent = 10;
+}
+message IntervalOfReal{
+	optional string lower = 1;
+	optional string upper = 2;
+	//the following fields are inherited from base types
+	optional bool lowerincluded = 3;
+	optional bool upperincluded = 4;
+	optional bool lowerunbounded = 5;
+	optional bool upperunbounded = 6;
+}
+message CSTRING{
+	optional string pattern = 1;
+	repeated string list = 2;
+	optional bool listopen = 3;
+	optional string assumedvalue = 4;
+	//the following fields are inherited from base types
+}
+message IntervalOfTime{
+	optional string lower = 1;
+	optional string upper = 2;
+	//the following fields are inherited from base types
+	optional bool lowerincluded = 3;
+	optional bool upperincluded = 4;
+	optional bool lowerunbounded = 5;
+	optional bool upperunbounded = 6;
+}
+message DVCOUNT{
+	optional int32 magnitude = 1;
+	//the following fields are inherited from base types
+	optional DVINTERVAL normalrange = 2;
+	repeated REFERENCERANGE otherreferenceranges = 3;
+	optional CODEPHRASE normalstatus = 4;
+	optional string magnitudestatus = 5;
+	optional string accuracy = 6;
+	optional bool accuracyispercent = 7;
+}
+message IntervalOfDuration{
+	optional string lower = 1;
+	optional string upper = 2;
+	//the following fields are inherited from base types
+	optional bool lowerincluded = 3;
+	optional bool upperincluded = 4;
+	optional bool lowerunbounded = 5;
+	optional bool upperunbounded = 6;
+}
+message FEEDERAUDITDETAILS{
+	required string systemid = 1;
+	optional PARTYIDENTIFIED location = 2;
+	optional PARTYIDENTIFIED provider = 3;
+	optional PARTYPROXYALTERNATIVES subject = 4;
+	optional DVDATETIME time = 5;
+	optional string versionid = 6;
+	//the following fields are inherited from base types
+}
+message DVURI{
+	optional string value = 1;
+	//the following fields are inherited from base types
+}
+message RESOURCEDESCRIPTIONITEM{
+	required CODEPHRASE language = 1;
+	required string purpose = 2;
+	repeated string keywords = 3;
+	optional string use = 4;
+	optional string misuse = 5;
+	optional string copyright = 6;
+	repeated StringDictionaryItem originalresourceuri = 7;
+	repeated StringDictionaryItem otherdetails = 8;
+	//the following fields are inherited from base types
+}
+message PARTYIDENTIFIED{
+	optional string name = 1;
+	repeated DVIDENTIFIER identifiers = 2;
+	//the following fields are inherited from base types
+	optional PARTYREF externalref = 3;
+}
+message CPRIMITIVE{
+	//the following fields are inherited from base types
+}
+message EXPRITEM{
+	required string type = 1;
+	//the following fields are inherited from base types
+}
+message DVIDENTIFIER{
+	required string issuer = 1;
+	required string assigner = 2;
+	required string id = 3;
+	required string type = 4;
+	//the following fields are inherited from base types
+}
+message DVPARAGRAPH{
+	repeated DVTEXT items = 1;
+	//the following fields are inherited from base types
+}
+message CDATE{
+	optional string pattern = 1;
+	optional string timezonevalidity = 2;
+	optional IntervalOfDate range = 3;
+	optional string assumedvalue = 4;
+	//the following fields are inherited from base types
+}
+message CDURATION{
+	optional string pattern = 1;
+	optional IntervalOfDuration range = 2;
+	optional string assumedvalue = 3;
+	//the following fields are inherited from base types
+}
+message CODEPHRASE{
+	required TERMINOLOGYID terminologyid = 1;
+	required string codestring = 2;
+	//the following fields are inherited from base types
+}
+message CONSTRAINTBINDINGITEM{
+	required string value = 1;
+	optional string code = 2;
+	//the following fields are inherited from base types
+}
+message DVENCAPSULATED{
+	optional CODEPHRASE charset = 1;
+	optional CODEPHRASE language = 2;
+	//the following fields are inherited from base types
+}
+message DVTIME{
+	required string value = 1;
+	//the following fields are inherited from base types
+	optional DVINTERVAL normalrange = 2;
+	repeated REFERENCERANGE otherreferenceranges = 3;
+	optional CODEPHRASE normalstatus = 4;
+	optional string magnitudestatus = 5;
+	optional DVDURATION accuracy = 6;
+}
+message ARCHETYPECONSTRAINT{
+	//the following fields are inherited from base types
+}
+message DATAVALUE{
+	//the following fields are inherited from base types
+}
+message CPRIMITIVEOBJECT{
+	optional CPRIMITIVEALTERNATIVES item = 1;
+	//the following fields are inherited from base types
+	required string rmtypename = 2;
+	required IntervalOfInteger occurrences = 3;
+	required string nodeid = 4;
+}
+message UIDBASEDID{
+	//the following fields are inherited from base types
+	required string value = 1;
+}
+message DVPARSABLE{
+	required string value = 1;
+	required string formalism = 2;
+	//the following fields are inherited from base types
+	optional CODEPHRASE charset = 3;
+	optional CODEPHRASE language = 4;
+}
+message EXPRBINARYOPERATOR{
+	required EXPRITEMALTERNATIVES leftoperand = 1;
+	required EXPRITEMALTERNATIVES rightoperand = 2;
+	//the following fields are inherited from base types
+	required string operator = 3;
+	optional bool precedenceoverridden = 4;
+	required string type = 5;
+}
+message DVINTERVAL{
+	optional DVORDEREDALTERNATIVES lower = 1;
+	optional DVORDEREDALTERNATIVES upper = 2;
+	optional bool lowerincluded = 3;
+	optional bool upperincluded = 4;
+	optional bool lowerunbounded = 5;
+	optional bool upperunbounded = 6;
+	//the following fields are inherited from base types
+}
+message EXPRUNARYOPERATOR{
+	required EXPRITEMALTERNATIVES operand = 1;
+	//the following fields are inherited from base types
+	required string operator = 2;
+	optional bool precedenceoverridden = 3;
+	required string type = 4;
+}
+message DVDURATION{
+	required string value = 1;
+	//the following fields are inherited from base types
+	optional DVINTERVAL normalrange = 2;
+	repeated REFERENCERANGE otherreferenceranges = 3;
+	optional CODEPHRASE normalstatus = 4;
+	optional string magnitudestatus = 5;
+	optional string accuracy = 6;
+	optional bool accuracyispercent = 7;
+}
+message STATEMACHINE{
+	repeated STATEALTERNATIVES states = 1;
+	//the following fields are inherited from base types
+}
+message TRANSLATIONDETAILS{
+	required CODEPHRASE language = 1;
+	repeated StringDictionaryItem author = 2;
+	optional string accreditation = 3;
+	repeated StringDictionaryItem otherdetails = 4;
+	//the following fields are inherited from base types
+}
+message TERMMAPPING{
+	required string match = 1;
+	optional DVCODEDTEXT purpose = 2;
+	required CODEPHRASE target = 3;
+	//the following fields are inherited from base types
+}
+message DVQUANTITY{
+	optional string magnitude = 1;
+	required string units = 2;
+	optional int32 precision = 3;
+	//the following fields are inherited from base types
+	optional DVINTERVAL normalrange = 4;
+	repeated REFERENCERANGE otherreferenceranges = 5;
+	optional CODEPHRASE normalstatus = 6;
+	optional string magnitudestatus = 7;
+	optional string accuracy = 8;
+	optional bool accuracyispercent = 9;
+}
+message TRANSITION{
+	required string event = 1;
+	optional string action = 2;
+	optional string guard = 3;
+	optional STATEALTERNATIVES nextstate = 4;
+	//the following fields are inherited from base types
+}
+message DVAMOUNT{
+	optional string accuracy = 1;
+	optional bool accuracyispercent = 2;
+	//the following fields are inherited from base types
+	optional DVINTERVAL normalrange = 3;
+	repeated REFERENCERANGE otherreferenceranges = 4;
+	optional CODEPHRASE normalstatus = 5;
+	optional string magnitudestatus = 6;
+}
+message AUTHOREDRESOURCE{
+	required CODEPHRASE originallanguage = 1;
+	optional bool iscontrolled = 2;
+	optional RESOURCEDESCRIPTION description = 3;
+	repeated TRANSLATIONDETAILS translations = 4;
+	optional REVISIONHISTORY revisionhistory = 5;
+	//the following fields are inherited from base types
+}
+message DVORDINAL{
+	optional int32 value = 1;
+	required DVCODEDTEXT symbol = 2;
+	//the following fields are inherited from base types
+	optional DVINTERVAL normalrange = 3;
+	repeated REFERENCERANGE otherreferenceranges = 4;
+	optional CODEPHRASE normalstatus = 5;
+}
+message CATTRIBUTE{
+	required string rmattributename = 1;
+	required IntervalOfInteger existence = 2;
+	repeated COBJECTALTERNATIVES children = 3;
+	//the following fields are inherited from base types
+}
+message DVEHRURI{
+	//the following fields are inherited from base types
+	optional string value = 1;
+}
+message ARCHETYPETERM{
+	repeated StringDictionaryItem items = 1;
+	optional string code = 2;
+	//the following fields are inherited from base types
+}
+message ASSERTION{
+	optional string tag = 1;
+	optional string stringexpression = 2;
+	required EXPRITEMALTERNATIVES expression = 3;
+	repeated ASSERTIONVARIABLE variables = 4;
+	//the following fields are inherited from base types
+}
+message REFERENCERANGE{
+	required DVTEXT meaning = 1;
+	required DVINTERVAL range = 2;
+	//the following fields are inherited from base types
+}
+message Interval{
+	optional bool lowerincluded = 1;
+	optional bool upperincluded = 2;
+	optional bool lowerunbounded = 3;
+	optional bool upperunbounded = 4;
+	//the following fields are inherited from base types
+}
+message EXPRLEAF{
+	required RAWDATA item = 1;
+	required string referencetype = 2;
+	//the following fields are inherited from base types
+	required string type = 3;
+}
+message PARTYRELATED{
+	required DVCODEDTEXT relationship = 1;
+	//the following fields are inherited from base types
+	optional PARTYREF externalref = 2;
+	optional string name = 3;
+	repeated DVIDENTIFIER identifiers = 4;
+}
+message GENERICID{
+	required string scheme = 1;
+	//the following fields are inherited from base types
+	required string value = 2;
+}
+message FEEDERAUDIT{
+	repeated DVIDENTIFIER originatingsystemitemids = 1;
+	repeated DVIDENTIFIER feedersystemitemids = 2;
+	optional DVENCAPSULATEDALTERNATIVES originalcontent = 3;
+	required FEEDERAUDITDETAILS originatingsystemaudit = 4;
+	optional FEEDERAUDITDETAILS feedersystemaudit = 5;
+	//the following fields are inherited from base types
+}
+message CATTRIBUTEALTERNATIVES{
+	optional CSINGLEATTRIBUTE csingleattributefield = 1;
+	optional CMULTIPLEATTRIBUTE cmultipleattributefield = 2;
+}
+message DVENCAPSULATEDALTERNATIVES{
+	optional DVMULTIMEDIA dvmultimediafield = 1;
+	optional DVPARSABLE dvparsablefield = 2;
+}
+message EXPROPERATORALTERNATIVES{
+	optional EXPRBINARYOPERATOR exprbinaryoperatorfield = 1;
+	optional EXPRUNARYOPERATOR exprunaryoperatorfield = 2;
+}
+message INTERVALALTERNATIVES{
+	optional IntervalOfReal intervalofrealfield = 1;
+	optional IntervalOfTime intervaloftimefield = 2;
+	optional IntervalOfDateTime intervalofdatetimefield = 3;
+	optional IntervalOfInteger intervalofintegerfield = 4;
+	optional IntervalOfDuration intervalofdurationfield = 5;
+	optional IntervalOfDate intervalofdatefield = 6;
+}
+message DATAVALUEALTERNATIVES{
+	optional DVPROPORTION dvproportionfield = 1;
+	optional DVTEXT dvtextfield = 2;
+	optional DVTIME dvtimefield = 3;
+	optional DVAMOUNT dvamountfield = 4;
+	optional DVQUANTITY dvquantityfield = 5;
+	optional DVDURATION dvdurationfield = 6;
+	optional DVGENERALTIMESPECIFICATION dvgeneraltimespecificationfield = 7;
+	optional DVSTATE dvstatefield = 8;
+	optional DVBOOLEAN dvbooleanfield = 9;
+	optional DVDATETIME dvdatetimefield = 10;
+	optional DVURI dvurifield = 11;
+	optional DVPERIODICTIMESPECIFICATION dvperiodictimespecificationfield = 12;
+	optional DVEHRURI dvehrurifield = 13;
+	optional DVPARSABLE dvparsablefield = 14;
+	optional DVORDINAL dvordinalfield = 15;
+	optional DVTEMPORAL dvtemporalfield = 16;
+	optional DVCOUNT dvcountfield = 17;
+	optional DVCODEDTEXT dvcodedtextfield = 18;
+	optional DVINTERVAL dvintervalfield = 19;
+	optional DVDATE dvdatefield = 20;
+	optional DVMULTIMEDIA dvmultimediafield = 21;
+	optional DVPARAGRAPH dvparagraphfield = 22;
+	optional DVIDENTIFIER dvidentifierfield = 23;
+}
+message DVORDEREDALTERNATIVES{
+	optional DVPROPORTION dvproportionfield = 1;
+	optional DVCOUNT dvcountfield = 2;
+	optional DVTEMPORAL dvtemporalfield = 3;
+	optional DVTIME dvtimefield = 4;
+	optional DVQUANTITY dvquantityfield = 5;
+	optional DVDURATION dvdurationfield = 6;
+	optional DVDATE dvdatefield = 7;
+	optional DVAMOUNT dvamountfield = 8;
+	optional DVDATETIME dvdatetimefield = 9;
+	optional DVORDINAL dvordinalfield = 10;
+}
+message CPRIMITIVEALTERNATIVES{
+	optional CINTEGER cintegerfield = 1;
+	optional CTIME ctimefield = 2;
+	optional CDATE cdatefield = 3;
+	optional CSTRING cstringfield = 4;
+	optional CREAL crealfield = 5;
+	optional CBOOLEAN cbooleanfield = 6;
+	optional CDURATION cdurationfield = 7;
+	optional CDATETIME cdatetimefield = 8;
+}
+message PARTYPROXYALTERNATIVES{
+	optional PARTYIDENTIFIED partyidentifiedfield = 1;
+	optional PARTYSELF partyselffield = 2;
+	optional PARTYRELATED partyrelatedfield = 3;
+}
+message STATEALTERNATIVES{
+	optional NONTERMINALSTATE nonterminalstatefield = 1;
+	optional TERMINALSTATE terminalstatefield = 2;
+}
+message COBJECTALTERNATIVES{
+	optional CONSTRAINTREF constraintreffield = 1;
+	optional ARCHETYPESLOT archetypeslotfield = 2;
+	optional ARCHETYPEINTERNALREF archetypeinternalreffield = 3;
+	optional CDVQUANTITY cdvquantityfield = 4;
+	optional CDVSTATE cdvstatefield = 5;
+	optional CCODEPHRASE ccodephrasefield = 6;
+	optional CDVORDINAL cdvordinalfield = 7;
+	optional CPRIMITIVEOBJECT cprimitiveobjectfield = 8;
+	optional CDEFINEDOBJECT cdefinedobjectfield = 9;
+	optional CCOMPLEXOBJECT ccomplexobjectfield = 10;
+}
+message DVTIMESPECIFICATIONALTERNATIVES{
+	optional DVPERIODICTIMESPECIFICATION dvperiodictimespecificationfield = 1;
+	optional DVGENERALTIMESPECIFICATION dvgeneraltimespecificationfield = 2;
+}
+message DVQUANTIFIEDALTERNATIVES{
+	optional DVPROPORTION dvproportionfield = 1;
+	optional DVCOUNT dvcountfield = 2;
+	optional DVTEMPORAL dvtemporalfield = 3;
+	optional DVTIME dvtimefield = 4;
+	optional DVQUANTITY dvquantityfield = 5;
+	optional DVDURATION dvdurationfield = 6;
+	optional DVDATE dvdatefield = 7;
+	optional DVAMOUNT dvamountfield = 8;
+	optional DVDATETIME dvdatetimefield = 9;
+}
+message CDOMAINTYPEALTERNATIVES{
+	optional CDVQUANTITY cdvquantityfield = 1;
+	optional CDVSTATE cdvstatefield = 2;
+	optional CCODEPHRASE ccodephrasefield = 3;
+	optional CDVORDINAL cdvordinalfield = 4;
+}
+message ARCHETYPECONSTRAINTALTERNATIVES{
+	optional ARCHETYPESLOT archetypeslotfield = 1;
+	optional ARCHETYPEINTERNALREF archetypeinternalreffield = 2;
+	optional CDVQUANTITY cdvquantityfield = 3;
+	optional CCODEPHRASE ccodephrasefield = 4;
+	optional CDVSTATE cdvstatefield = 5;
+	optional CMULTIPLEATTRIBUTE cmultipleattributefield = 6;
+	optional CCOMPLEXOBJECT ccomplexobjectfield = 7;
+	optional CSINGLEATTRIBUTE csingleattributefield = 8;
+	optional CONSTRAINTREF constraintreffield = 9;
+	optional CDVORDINAL cdvordinalfield = 10;
+	optional CPRIMITIVEOBJECT cprimitiveobjectfield = 11;
+	optional CDEFINEDOBJECT cdefinedobjectfield = 12;
+}
+message EXPRITEMALTERNATIVES{
+	optional EXPRBINARYOPERATOR exprbinaryoperatorfield = 1;
+	optional EXPRUNARYOPERATOR exprunaryoperatorfield = 2;
+	optional EXPRLEAF exprleaffield = 3;
+}
+message OBJECTIDALTERNATIVES{
+	optional GENERICID genericidfield = 1;
+	optional ARCHETYPEID archetypeidfield = 2;
+	optional HIEROBJECTID hierobjectidfield = 3;
+	optional TEMPLATEID templateidfield = 4;
+	optional TERMINOLOGYID terminologyidfield = 5;
+	optional OBJECTVERSIONID objectversionidfield = 6;
+	optional UIDBASEDID uidbasedidfield = 7;
+}
+
+
+//these messages are used by java to eiffel comm. 
+message RequestHeader{
+	required string url = 1;
+}
+
+message Parameters{
+	repeated string content = 1;
+}
+
+message ResponseHeader{
+	enum Status{
+		PB_OK = 1;
+		PB_ERROR = 2;
+		PB_WARNING = 3;
+		PB_INFO = 4;
+	}
+	required Status responsestatus = 1 [default = PB_OK];
+	required string content = 2;
+}
+
+message ArchetypeList{
+	repeated string names = 1;
+}
+
+message RAWDATA{
+	required string typeinfo = 1;
+	optional bytes msgdata = 2;
+	optional string stringvalue = 3;
+	optional int32 integervalue = 4;
+
+}

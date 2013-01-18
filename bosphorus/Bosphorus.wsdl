@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions 
+	 
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	xmlns="http://schemas.openehr.org/v1"
+	
+	targetNamespace="http://schemas.openehr.org/v1">
+  <wsdl:types>
+    <xsd:schema>
+    	<xsd:import namespace="http://schemas.openehr.org/v1" schemaLocation="xsd/OpenehrProfile.xsd">    	
+    	</xsd:import>
+    </xsd:schema>
+    
+  </wsdl:types>
+  
+  <wsdl:message name="getpbrequest">
+  	<wsdl:part element="archetype" name="ARCHETYPE" ></wsdl:part>
+  </wsdl:message>
+
+  
+  <wsdl:portType name="BP" >
+  	<wsdl:operation name="getBP">
+            <wsdl:input message="getpbrequest" name="getpbrequest"></wsdl:input>
+  	</wsdl:operation>
+  </wsdl:portType>
+  
+  <wsdl:binding name="getpbbinding" type="BP">
+  	<soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+  	<wsdl:operation name="getBP">
+  		<soap:operation soapAction="http://mycompany.com/getarchetype"/>
+  		<wsdl:input name="getpbrequest">
+  		<soap:body use="literal"/>
+  		</wsdl:input>
+  	</wsdl:operation>
+  </wsdl:binding>
+  
+  <wsdl:service name="ArchetypeService">
+        <wsdl:port binding="getpbbinding" name="BP">          
+            <soap:address location="http://localhost:8080/holidayService/"/>             
+        </wsdl:port>
+    </wsdl:service>
+  
+</wsdl:definitions>

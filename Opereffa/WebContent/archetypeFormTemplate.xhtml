@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:c="http://java.sun.com/jstl/core"
+    xmlns:wiz="http://www.tolven.org/jsf/wizard"
+    xmlns:trim="http://www.tolven.org/jsf/trim">
+
+<body>
+	<ui:composition template="test.xhtml">
+	<ui:define name="content">
+		<h:form id="mainform">
+		<h:inputHidden value="#{connectorBean.mode}" id="mode"></h:inputHidden>
+		<h:inputHidden value="#{connectorBean.persistenceSessionId}" id="sessionId"></h:inputHidden>
+		<div id="sessionId" style="display:none;" >#{connectorBean.persistenceSessionId}</div>
+		
+		<div id="createdAt" style="display:none;" >#{connectorBean.archetypeCreationDate}</div>
+		<!-- HERE GOES PAGE CONTENT -->
+		<ui:insert name="archetypeFormContent"></ui:insert>		
+		</h:form>
+		<!-- PAGE CONTENT ENDS -->
+	</ui:define>	
+	</ui:composition>
+	
+</body>
+</html>

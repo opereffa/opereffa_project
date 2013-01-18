@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core" xml:lang="en" lang="en">
+	<ui:composition template="archetypeFormTemplate.xhtml">
+		<ui:define name="archetypeFormContent">
+<input id="archetypeFileName" type="hidden" value="openEHR-EHR-INSTRUCTION.investigations_dcsummary.v1.adl"/>
+<table><tr><td colspan="3"><div>New cluster</div></td></tr>
+
+		<tr>
+			<td>
+			<div jsf2dojo="true" style="display:inline;" ><div>Investigations</div></div>
+			</td>
+			<td>
+				<div jsf2dojo="true" style="display:inline;" ><h:inputText value="#{archetypeBinder.dvtext.text.inNode['/activities[at0001]/description[at0002]/items[at0004]/items[at0003]/value']}"/></div>
+			</td>
+			<td>
+			
+			</td>
+
+		</tr>
+<tr><td colspan="3"><div>INvestigations</div></td></tr>
+
+		<tr>
+			<td>
+			<div jsf2dojo="true" style="display:inline;" ><div>Xray plain film</div></div>
+			</td>
+			<td>
+				<div jsf2dojo="true" style="display:inline;" ><h:inputText value="#{archetypeBinder.dvtext.text.inNode['/activities[at0001]/description[at0002]/items[at0005]/items[at0006]/value']}"/></div>
+			</td>
+			<td>
+			
+			</td>
+
+		</tr>
+
+		<tr>
+			<td>
+			<div jsf2dojo="true" style="display:inline;" ><div>ECG</div></div>
+			</td>
+			<td>
+				<div jsf2dojo="true" style="display:inline;" ><h:inputText value="#{archetypeBinder.dvtext.text.inNode['/activities[at0001]/description[at0002]/items[at0005]/items[at0007]/value']}"/></div>
+			</td>
+			<td>
+			
+			</td>
+
+		</tr>
+<tr><td colspan="3"><div>Haematology</div></td></tr>
+
+		<tr>
+			<td>
+			<div jsf2dojo="true" style="display:inline;" ><div>FBC</div></div>
+			</td>
+			<td>
+				<div jsf2dojo="true" style="display:inline;" ><h:inputText value="#{archetypeBinder.dvtext.text.inNode['/activities[at0001]/description[at0002]/items[at0005]/items[at0008]/items[at0009]/value']}"/></div>
+			</td>
+			<td>
+			
+			</td>
+
+		</tr>
+<tr><td colspan="3"><div>Abdominal Exam</div></td></tr>
+<tr><td colspan="3"><div>Tenderness</div></td></tr>
+
+		<tr>
+			<td>
+			<div jsf2dojo="true" style="display:inline;" ><div>TendernessObservation</div></div>
+			</td>
+			<td>
+				<div  id="dndLimitBox500435962">
+	<div class="dndContainer" style="float: left; margin: 5px;"  multipleInstanceWidget="simpleAdderSource" id="dndSource500435962"  ><h:selectManyListbox value="#{archetypeBinder.dvcodedtext.selectedCodes.inNode['/activities[at0001]/description[at0002]/items[at0010]/items[at0028]/items[at0029]/value']}">
+				<f:selectItems value="#{archetypeBinder.dvcodedtext.codesList.inNode['/activities[at0001]/description[at0002]/items[at0010]/items[at0028]/items[at0029]/value']}" />
+				</h:selectManyListbox>			</div>
+			<div style="float: left; margin: 5px;">
+				<div  class="dndContainer" id="dndTarget500435962">			      
+    			</div>
+    		</div>
+</div>
+
+			</td>
+			<td>
+			
+			</td>
+
+		</tr>
+<tr><td colspan="3"><div>UpperLower</div></td></tr>
+
+		<tr>
+			<td>
+			<div jsf2dojo="true" style="display:inline;" ><div>UpperLowerObservation</div></div>
+			</td>
+			<td>
+				<div  id="dndLimitBox1413975750">
+	<div class="dndContainer" style="float: left; margin: 5px;"  multipleInstanceWidget="simpleAdderSource" id="dndSource1413975750"  ><h:selectManyListbox value="#{archetypeBinder.dvcodedtext.selectedCodes.inNode['/activities[at0001]/description[at0002]/items[at0010]/items[at0033]/items[at0034]/value']}">
+				<f:selectItems value="#{archetypeBinder.dvcodedtext.codesList.inNode['/activities[at0001]/description[at0002]/items[at0010]/items[at0033]/items[at0034]/value']}" />
+				</h:selectManyListbox>			</div>
+			<div style="float: left; margin: 5px;">
+				<div  class="dndContainer" id="dndTarget1413975750">			      
+    			</div>
+    		</div>
+</div>
+
+			</td>
+			<td>
+			
+			</td>
+
+		</tr>
+<tr><td colspan="3"><div>Laterality</div></td></tr>
+
+		<tr>
+			<td>
+			<div jsf2dojo="true" style="display:inline;" ><div>LateralObservation</div></div>
+			</td>
+			<td>
+				<div  id="dndLimitBox1757811014">
+	<div class="dndContainer" style="float: left; margin: 5px;"  multipleInstanceWidget="simpleAdderSource" id="dndSource1757811014"  ><h:selectManyListbox value="#{archetypeBinder.dvcodedtext.selectedCodes.inNode['/activities[at0001]/description[at0002]/items[at0010]/items[at0021]/items[at0024]/value']}">
+				<f:selectItems value="#{archetypeBinder.dvcodedtext.codesList.inNode['/activities[at0001]/description[at0002]/items[at0010]/items[at0021]/items[at0024]/value']}" />
+				</h:selectManyListbox>			</div>
+			<div style="float: left; margin: 5px;">
+				<div  class="dndContainer" id="dndTarget1757811014">			      
+    			</div>
+    		</div>
+</div>
+
+			</td>
+			<td>
+			
+			</td>
+
+		</tr>
+<tr>
+				<td colspan="2" align="right">
+				<div jsf2dojo="true" style="display:inline;" ><h:commandButton id="postit"  type="submit" value="#{connectorBean.modeLabel}" action="#{archetypeBinder.performAction}"/></div>
+				</td>
+			</tr></table></ui:define>		
+	</ui:composition>
+</html>

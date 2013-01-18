@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core" xml:lang="en" lang="en">
+	<head>
+		<title>My Facelets Page</title>
+		<meta http-equiv="keywords" content="enter,your,keywords,here" />
+		<meta http-equiv="description"
+			content="A short description of this page." />
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+		<!--<link rel="stylesheet" type="text/css" href="styles.css">-->
+		
+		<style type="text/css">
+		@import "#{facesContext.externalContext.request.contextPath}/scripts/dojo/dojo/resources/dojo.css";		
+		@import "#{facesContext.externalContext.request.contextPath}/scripts/dojo/dijit/themes/tundra/tundra.css";		
+		@import "dndDefault.css";
+	</style>
+	
+	<script type="text/javascript" src="#{facesContext.externalContext.request.contextPath}/scripts/dojo/dojo/dojo.js" djConfig="parseOnLoad: true, isDebug: false"></script>
+	<script language="JavaScript" type="text/javascript"
+		src="#{facesContext.externalContext.request.contextPath}/scripts/tests.js"></script>	
+			
+			<script type="text/javascript"> 
+	//<![CDATA[ 		  
+		
+	 //]]> 
+	</script>	
+	</head>
+	<body>
+		
+	<f:view><h:form id="mainform">
+				<span onclick="testlb();return false;">test</span> <f:verbatim> &nbsp;&nbsp;&nbsp;</f:verbatim><span onclick="testStatic();return false;">test static</span>
+				<br></br>
+				
+				<select name="static" id="static" multiple="multiple" >
+					<option value="1">One</option>
+					<option value="2">Two</option>
+					<option value="3">Three</option>
+					<option value="4">Four</option>
+					<option value="5">Five</option>
+				</select>
+			</h:form><p>
+			
+		</p></f:view></body>
+</html>

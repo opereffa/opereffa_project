@@ -1,0 +1,1 @@
+$kind$ $type$ $name$ = $order$;

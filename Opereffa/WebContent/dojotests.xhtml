@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core" xml:lang="en" lang="en">
+	
+<f:view><ui:composition template="archetypeFormTemplate.xhtml">
+		<ui:define name="archetypeFormContent">
+		<script type="text/javascript"> 
+	//<![CDATA[
+	function tstFn(sender){			
+		var func = dojo.query("div[control='adderDropDown']", sender).query("select")[0].onchange;
+		dojo.attr(dojo.byId('divtoconnect'), 'onclick', func);
+		dojo.query("div[control='adderDropDown']", sender).orphan();							
+		
+	//func = document.getElementById('mainform:simpleAdderDropDown').onchange;
+	//func();
+			
+	} 		  
+	
+	function dummy(){
+		alert('dummy');
+	}
+		function addElement(){
+		var option = document.createElement('option');
+		var source = dojo.byId('mainform:itemSource');
+		var target = dojo.byId('mainform:lbox');
+		option.text = source[source.selectedIndex].text;
+		option.value = source[source.selectedIndex].value;
+		var items = target.options;
+		for(itemsIndex = 0; itemsIndex < items.length; itemsIndex++){
+			if (items[itemsIndex].value == option.value){
+				alert('You have already added this item');
+				return;
+			}
+		}
+		var lbox = dojo.byId('mainform:lbox');
+		lbox.options.add(option);
+		//lbox.innerHTML = 'aaaa';
+		}
+	 //]]> 
+	</script>
+		
+<table>
+	<tr>
+		<td>						
+			<h:selectOneMenu id="itemSource">
+				<f:selectItem itemLabel="Val1" itemValue="Value1" />
+				<f:selectItem itemLabel="Val2" itemValue="Value2" />
+			</h:selectOneMenu>			
+		</td>
+			
+		<td>
+			<h:commandButton id="cmdTest" type="submit" value="+" onclick="addElement();return false;"></h:commandButton>
+		</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">
+			<h:selectManyListbox id="lbox" style="width: 200px; height: 300px;" onclick="addElement(this.id);return false;"></h:selectManyListbox>
+		</td>
+	</tr>
+	
+</table>
+<div id="mainform:tstdiv"></div>
+			</ui:define>		
+	</ui:composition></f:view></html>

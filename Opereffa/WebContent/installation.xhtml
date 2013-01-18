@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core" xml:lang="en" lang="en">
+	<ui:composition template="OpereffaContentTemplate.xhtml">
+		<ui:define name="content">
+		<div align="center">
+		<table class="middleTable">
+		<tr>
+			<td align="center"><h1>Installing Opereffa</h1></td>
+		</tr>
+		<tr>
+			<td align="left">
+				<p class="opereffa">You have various options for installing Opereffa in your own environment.The following sections
+				provide installation options for different purposes. All the files related to Opereffa can be found 
+				at: <a href="https://sourceforge.net/projects/opereffa/">https://sourceforge.net/projects/opereffa/</a></p>				
+			</td>
+		</tr>
+		<tr>
+			<td align="center"><h1>Installation under Windows, using the binary package</h1></td>			
+		</tr>
+		<tr>
+			<td align="left">
+			<p class="opereffa">The binary setup requires knowledge of Java, Apache Tomcat, and Postgresql. Even though you don't need to know a lot about these technologies, please consider 
+			alternative installations if you are not comfortable with their use.  </p>
+			<p class="opereffa"></p>
+				<p class="opereffa">Opereffa is using Java 6 and Apache Tomcat 6.0.18 at the moment. The development Environment is Eclipse 3.4, J2EE release. Setups other than this, like Java 5 or Tomcat 5
+				have not been tested.</p>
+				<p class="opereffa">Opereffa is packaged in binary form for Windows only at the moment. (This is due to usage of the 
+				file system as an archetype repository). In the near future, a Linux binary package may follow.  In case you want to install Opereffa 
+				in your own Windows environment, first, you need Java 6, Apache Tomcat 6, and Postgresql.</p>
+				<p class="opereffa"> During Postgresql setup, provide the password "postgres" (without quotes) for user postgres. After the setup completes, you 
+				should have a database named postgres, with a user postgres and password postgres..</p>
+				<p class="opereffa"> </p>
+				<p class="opereffa">After you download and set these up, you need to download Windows binary package from Opereffa's sourceforge project page. (The address is given above). 
+				This file includes an .sql file with the db scripts to setup the database. Execute these with PGAdmin's query tool. 
+				You can check postgresql documentation for details.</p>				
+				<p class="opereffa"> After you have set up the database, you must copy the directories under the webapp directory in the binary package, to 
+				the webapp directory of your Apache installation. The final step is to copy the archetypeRepository directory in the binary package to your C drive's root.  
+				</p>								
+				<p class="opereffa"> This should give you archetypeRepository in your C drive's root, Apache Tomcat with Java 6, and a working postgresql database server, 
+				with a database named postgres, a db user named postgres (with password postgres). Then you can start Tomcat and browser to http://localhost:8080/Opereffa/    
+				</p>
+				<p class="opereffa"> Starting from version 0.2, Opereffa uses LexEVS from NCI. LexEVS is a project that enhances NCI's LexBIG implementation, and it provides terminology services. 
+				In order to use terminology bindings in archetypes, LexEVS should be installed. Installation instructions and detailed information can be found at <a href="https://cabig-kc.nci.nih.gov/Vocab/KC/index.php/LexEVS_Version_5.0">LexEVS release page</a>    
+				</p>
+				<p class="opereffa"> After setting up LexEVS, the Apache Tomcat instance used for Opereffa web application needs to be started with the Java VM parameter: 
+				-DLG_CONFIG_FILE="C:\Program Files\LexGrid\LexEVS\5.0.0Package\resources\config\lbconfig.props" . In Eclipse environment this parameter can be added to 
+				Tomcat server properties by doing the following: Open server properties editor, click on the link that says "Open launch configuration", and in the arguments tab, add the given parameter.
+				If you are not starting Tomcat from Eclipse, please refer to Tomcat documentation for setting this parameter. Without this parameter, Opereffa web application can not access the sample terminology in LexBIG. 				
+				</p>
+				
+			</td>
+		</tr>
+		
+
+<tr>
+			<td align="center"><h1>Installation under Windows, using the source package</h1></td>			
+		</tr>
+		<tr>
+			<td align="left">
+			<p class="opereffa">The source package is the Eclipse workspace that is used with the Eclipse IDE for Java EE Developers 
+			(<a href="http://www.eclipse.org/downloads/">download</a>). You can download it from the sourceforge project page. 
+			The source package contains the workspace (a dir named Opereffa), archetypeRepository (check binary installation details above for its use), 
+			and a webapps directory. The webapps directory contains Eclipse Birt report viewer application, and a ready to run version of the Opereffa web application. 
+			The db script necessary for DB setup is in the dbscripts directory of 
+			OpenEHRREfImpExtensions project. (see binary installation notes above for db details). Finally, you should have a Tomcat installation onto 
+			which you'll deploy Opereffa from Eclipse. However, setting up Web projects in Eclipse IDE for Java EE has a couple of tricks, and 
+			you'll probably spend some time for configuring your Tomcat connection from Eclipse. 
+			The easier way to configure the Eclipse environment using the source package is to create a new workspace, and import the existing projects from the source package to this new
+			workspace. In Eclispe, select Import from file menu, and select import existing projects. Choose the Opereffa directory in source package download, and import projects into your new workspace. Also check
+			copy projects to workspace in the import wizard.
+			After importing projects into your new workspace, you will have to configure the web project, named Opereffa. You need to create a server in the servers view of Eclipse. Download and extract Apache Tomcat to your
+			disk, and create a new server in Eclipse. While creating your new server registration in Eclipse, you should choose java JDK during environment settings configuration. If your JDK is not added to list of 
+			available JREs, you need to add it with installed JREs button. Add Opereffa project at the last step of the wizard.
+			The Birt report viewer web application must also be copied to webapps directory of your Apache Tomcat directory. When you perform these steps, you should have an Eclipse workspace setup, in which you can
+			deploy Opereffa web application to your new registered server, and run it.
+			Once again, as with the above binary setup scenario, there is a more suitable way to take a look at the development environment and make changes to the code  (see below) . If you are having trouble with configuring 
+			Eclipse, you are 
+			advised to give this a try before diving into the above methods.</p>	
+			<p class="opereffa"> Starting from version 0.2, Opereffa uses LexEVS from NCI. LexEVS is a project that enhances NCI's LexBIG implementation, and it provides terminology services. 
+				In order to use terminology bindings in archetypes, LexEVS should be installed. Installation instructions and detailed information can be found at <a href="https://cabig-kc.nci.nih.gov/Vocab/KC/index.php/LexEVS_Version_5.0">LexEVS release page</a>    
+				</p>						
+				<p class="opereffa"> After setting up LexEVS, the Apache Tomcat instance used for Opereffa web application needs to be started with the Java VM parameter: 
+				-DLG_CONFIG_FILE="C:\Program Files\LexGrid\LexEVS\5.0.0Package\resources\config\lbconfig.props" . In Eclipse environment this parameter can be added to 
+				Tomcat server properties by doing the following: Open server properties editor, click on the link that says "Open launch configuration", and in the arguments tab, add the given parameter.
+				If you are not starting Tomcat from Eclipse, please refer to Tomcat documentation for setting this parameter. Without this parameter, Opereffa web application can not access the sample terminology in LexBIG. 				
+				</p>
+			</td>
+		</tr>
+		
+		<tr>
+			<td align="center"><h1>Installation using the SVN repository</h1></td>			
+		</tr>
+		<tr>
+			<td align="left">
+			<p class="opereffa">There is an SVN server that hosts the Opereffa project at http://www.openehr.org/svn/opereffa . The SVN root contains the Eclipse projects, not the Eclipse workspace. In order to get source 
+			code into your Eclipse environment, you can install <a href="http://subclipse.tigris.org/">Subclipse</a> first. Important note: different version of Subclipse require different versions of SVN. Especially under
+			some Linux distributions, configuring the correct version of Subversion and Subclipse can be hard. Subclipse version 1.4.x seems to work without any problems, so you may prefer to install it, especially under Linux
+			instead of the latest 1.6.x release. After you install Subclipse, create an empty workspace, or open your existing workspace and choose import from file menu. There is now an import option under SVN, which will let 
+			you checkout Opereffa source code into your Eclipse Environment. At the moment, the main repository is under TRUNK. Directories under the OpereffaDev directory are Eclipse project directories.</p>	
+			<p class="opereffa">After you checkout all projects under the OpereffaDev into your workspace, you should register your Apache Tomcat server and deploy the Opereffa web project to it. Using the source package 
+			section above includes info on how to do this.</p>								
+			</td>
+		</tr>
+		
+		<tr>
+			<td align="center"><h1>Opereffa Live DVD</h1></td>			
+		</tr>
+		<tr>
+			<td align="left">
+			<p class="opereffa">This is the recommended setup if you are interested in taking a deeper look into Opereffa. 
+			There is a live DVD which you can download from Sourceforge page. In the file list, there is an iso file that you must download.
+			This image file is what you are going the use to burn the DVD. the md5 file is for checking the authenticity of the dvd image. 
+			The DVD can boot as a live DVD, 
+			(that is it will not write anything onto your hard drive) and all you have to do is to login with username opereffa and password opereffa. You'll be provided with a 
+			Linux Ubuntu Desktop, and simply clicking Firefox on the launch panel will open the Opereffa web application in the browser. This Linux installation contains a pre-configured 
+			Tomcat and Postgresql database, and you can play with it just as with a local installation. Other computers on the network can access it, too. </p>
+						
+				
+				<p class="opereffa">The live DVD also contains the pre-configured Eclipse development environment, and you can edit, compile and deploy code to a separate Tomcat installation configured for 
+				development purposes. You should first stop the main Tomcat server though, and there is a link on the desktop that does this. Just provide opereffa as 
+				password when asked. You can open Eclipse now, and you have a fully configured environment where you can change code, deploy to a development Tomcat instance and test. The Eclipse setup in Live DVD is 
+				connected to SVN server of Opereffa, so you can check out the latest version. However, you should be aware that there is at least one configuration that must be changed if you want to use Opereffa source under 
+				Linux, so be careful about updating the code that comes with the Live DVD.      
+				</p>
+				
+				<p class="opereffa">In case you want to install this pre-configured development environment, simply restart it, and type install in 
+				the boot prompt. This will give you a Ubuntu Linux development machine, ready for development (note: the install link in the desktop is not yet tested, so its use is not recommended). 
+				Please also note that the live DVD currently contains a slightly older version of the code base and it has older archetypes with some of them being test archetypes.
+				</p>
+				
+			</td>
+		</tr>
+
+		
+		<tr>
+			<td align="center"><h1>Opereffa Live DVD in VirtualBox</h1></td>			
+		</tr>
+		<tr>
+			<td align="left">
+			<p class="opereffa"> In case you want to play with the Live DVD but don't want to install it on your own machine, or can't switch to 
+			Ubuntu yet, give <a href="http://www.virtualbox.org/">VirtualBox</a> a try. This is an open source virtual machine software, very easy to use, 
+			and even its closed source version (recommended) is free for personal use. So download it, setup a virtual machine, with the guidance of the wizard, provide the 
+			iso image of Live DVD as the CD/DVD Rom in your virtual machine. You can now both boot in Live DVD mode, and set it up in the virtual machine if you wish. This is 
+			probably the most flexible combination of all, but performance will not be as good as the native setup from Live DVD. </p>
+			
+				
+			</td>
+		</tr>
+		
+		<tr>
+			<td align="center"><h1>Opereffa setup in the future</h1></td>			
+		</tr>
+		<tr>
+			<td align="left">
+			<p class="opereffa">At the moment, the binary and source packages require a degree of technical skill and there is ongoing work to make these packages more setup friendly.      
+				</p>
+				
+			</td>
+		</tr>
+		
+		<tr>
+			<td align="center"><h1>Current set of Archetypes</h1></td>			
+		</tr>
+		<tr>
+			<td align="left">
+			<p class="opereffa">You can find the current set of Archetypes used by Opereffa <a href="ftp://opereffa.chime.ucl.ac.uk/archetypeRepository.zip">here</a>       
+				</p>
+				
+			</td>
+		</tr>
+		
+		
+		
+		
+		</table>
+		</div>
+		
+		</ui:define>		
+	</ui:composition>
+</html>

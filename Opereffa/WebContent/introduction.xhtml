@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core" xml:lang="en" lang="en">
+	<ui:composition template="OpereffaContentTemplate.xhtml">
+		<ui:define name="content">
+		<div align="center">
+		<table class="middleTable">
+		<tr>
+			<td align="center"><h1>Welcome to Opereffa!</h1></td>
+		</tr>
+		<tr>
+			<td align="left">
+				<p class="opereffa">Opereffa stands for openEHR REFerence Framework and Application. It is a project for creating an open source clinical application which will be driven by the Clinical Review Board of openEHR. The clinical application will be built on top of a Java based open source framework, which is using the existing open source Java reference implementation of openEHR.</p>
+				
+				<p class="opereffa">This web site contains information about the project, source code and binaries, and finally a demonstration of the current state of Opereffa.</p>
+				 
+				 <p class="opereffa">Opereffa aims to bring together the openEHR clinical and technical communities on a common discussion platform, where the CRB's requirements can be used to develop an openEHR based software development framework.  </p>
+				 
+				 <p class="opereffa">Opereffa is at its quite early stages, as yet, so it does not provide full set of features necessary for development of clinical applications. openEHR has a very large scope and it is possible to develop many different clinical applications in different medical domains using it. Instead of tackling the implementation challenge at the level of the whole specification, Opereffa will implement parts of the specification, incrementally, based on CRB feedback and requests. The goal of the project is to establish an incremental development environment where features of the application and the capabilities of the underlying framework can be built collaboratively by both clinical and technical communities. Please visit <a href="clinicalreq.jsf">Clinical Requirements</a> for a note from Dr. Tony Shannon</p>
+			</td>
+		</tr>
+		<tr>
+			<td align="center"><h1>Relationship with other projects</h1></td>			
+		</tr>
+		<tr>
+			<td align="left">
+				<p class="opereffa">Opereffa is envisioned to be an initiative that is complementary to already existing open source projects under the openEHR Foundation. Therefore, the basic principle is to build on existing assets rather than replacing them. The existing open source Java reference implementation is used by Opereffa. Opereffa introduces new capabilities which do not exist in this implementation, but it does so by leveraging the functionality provided by it. It is possible to create capabilities like GUI generation, persistence, reporting and supporting tooling using the existing Java reference implementation, and Opereffa attempts to do this in a consistent, extendible way.</p>				
+				
+			</td>
+		</tr>
+		</table>
+		</div>
+		
+		</ui:define>		
+	</ui:composition>
+</html>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core" xml:lang="en" lang="en">
+	<ui:composition>	
+	<div dojoType="dijit.layout.SplitContainer"
+		  orientation="vertical"
+		  sizerWidth="3"
+		  activeSizing="true"
+		  style="border: 0px solid #bfbfbf; float: left; margin: 0px;  width: 100%; height: 100%;">
+		  
+		  <div dojoType="dijit.layout.ContentPane" sizeMin="10" sizeShare="90" style="margin:0px;">
+			    <div dojoType="dijit.layout.AccordionContainer" duration="200"
+		                style="border:0px; margin-top:0px; width: 100%; height: 100%; overflow: hidden;">
+		                <!-- content inline -->
+		                <div dojoType="dijit.layout.AccordionPane" selected="true" title="Observations">
+		                        <div id="observationArchetypeList">
+		                        	<ui:include src="observationArchetypes.xhtml"></ui:include>
+		                        </div>
+		                </div>
+		       
+		                <div dojoType="dijit.layout.AccordionPane" selected="true" title="Instructions">
+		                		<div id="instructionArchetypeList">
+		                        	<ui:include src="instructionArchetypes.xhtml"></ui:include>
+		                       	</div>
+		                </div>
+		                
+		                <div dojoType="dijit.layout.AccordionPane" selected="true" title="Evaluations">
+		                		<div id="evaluationArchetypeList">
+		                        	<ui:include src="evaluationArchetypes.xhtml"></ui:include>
+		                       	</div>
+		                </div>
+		        </div>
+		  </div>
+		  
+		  <div dojoType="dijit.layout.ContentPane"  sizeShare="10">
+		    <span onclick="refreshArchetypePanes();">refresh</span>
+		  </div>
+		
+		</div>
+
+		
+	        
+        
+	</ui:composition>
+</html>
